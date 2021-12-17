@@ -1,0 +1,22 @@
+{
+  "name": "majribechir_3_16122021",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bmajri75/MajriBechir_3_16122021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bmajri75/MajriBechir_3_16122021/issues"
+  },
+  "homepage": "https://github.com/Bmajri75/MajriBechir_3_16122021#readme",
+  "dependencies": {
+    "sass": "^1.45.0"
+  }
+}
