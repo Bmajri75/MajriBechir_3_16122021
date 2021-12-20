@@ -18,25 +18,31 @@ body {
 }
 
 @media screen and (max-width: 470px) {
-  h1 {
-    font-family: "Shrikhand", cursive;
-    @include flex-center;
-  }
-  .presentation {
-    @include flex-column-center;
+  .header{
 
-    &__localisation-city {
-      background-color: $gris-clair;
-      width: 100%;
-      height: 50px;
+   &__title {
+      font-family: "Shrikhand", cursive;
       @include flex-center;
     }
+    &__localisation-city {
+      background-color: $gris-fonce;
+      width: 100%;
+      height: 50px;
+      margin: 0;
+      @include flex-center;
+    }
+  }
+  
+  .presentation {
+    @include flex-column-center;
+    background-color: $gris-clair;
+    padding-bottom: 50px;
 
     &__call-to-action {
       @include flex-column-center;
     }
     &__txt {
-      color: $gris-fonce;
+      color: $gris-tres-fonce;
     }
 
     &__button {
@@ -49,18 +55,29 @@ body {
     }
   }
   .fonctionnement {
-    margin: 100px 20px;
-    
+    margin: 50px 20px;
+
     &__order-list {
       list-style: none;
+      padding: 0px;
     }
 
     &__detail{
-      border: 2px solid $gris-fonce;
+      border: none;
+      box-shadow: 5px 10px 20px $gris-fonce;
       border-radius: 20px;
       padding: 30px;
-      margin: 20px;
+      margin: 40px 0;
+      font-size: 15px;
+      font-weight: 700;
     }
+    &__detail--violet{
+      background-color: #ded1ee;
+      #fas--violet{
+        color: $violet;
+      }
+    }
+
     &__number{
       padding: 5px 10px;
       margin: 5px;
@@ -70,6 +87,12 @@ body {
       top: 0;
       right: 50px;
       color: white;
+    }
+
+    .fas{
+      padding: 0px 25px 0 0;
+      font-size: 20px;
+      color: $gris-tres-fonce;
     }
   }
 }

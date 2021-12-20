@@ -347,8 +347,17 @@ body {
 }
 
 @media screen and (max-width: 470px) {
-  h1 {
+  .header__title {
     font-family: "Shrikhand", cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .header__localisation-city {
+    background-color: #cac8c8;
+    width: 100%;
+    height: 50px;
+    margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -359,14 +368,8 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-  }
-  .presentation__localisation-city {
     background-color: #e8e7e7;
-    width: 100%;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding-bottom: 50px;
   }
   .presentation__call-to-action {
     display: flex;
@@ -375,7 +378,7 @@ body {
     text-align: center;
   }
   .presentation__txt {
-    color: #989898;
+    color: #858383;
   }
   .presentation__button {
     background: linear-gradient(#FF79DA, #9356DC);
@@ -387,16 +390,26 @@ body {
   }
 
   .fonctionnement {
-    margin: 100px 20px;
+    margin: 50px 20px;
   }
   .fonctionnement__order-list {
     list-style: none;
+    padding: 0px;
   }
   .fonctionnement__detail {
-    border: 2px solid #989898;
+    border: none;
+    box-shadow: 5px 10px 20px #cac8c8;
     border-radius: 20px;
     padding: 30px;
-    margin: 20px;
+    margin: 40px 0;
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .fonctionnement__detail--violet {
+    background-color: #ded1ee;
+  }
+  .fonctionnement__detail--violet #fas--violet {
+    color: #9356DC;
   }
   .fonctionnement__number {
     padding: 5px 10px;
@@ -407,6 +420,11 @@ body {
     top: 0;
     right: 50px;
     color: white;
+  }
+  .fonctionnement .fas {
+    padding: 0px 25px 0 0;
+    font-size: 20px;
+    color: #858383;
   }
 }
 
