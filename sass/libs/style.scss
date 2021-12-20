@@ -1,0 +1,75 @@
+// Import et des font
+@import "../../public/css/normalize";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap");
+
+// import des autres dependances scss
+@import "./_variables";
+@import "./_placeholders";
+@import "./_mixins";
+
+// Font awesome
+
+// le calcule des box inclue les bordure
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+@media screen and (max-width: 470px) {
+  h1 {
+    font-family: "Shrikhand", cursive;
+    @include flex-center;
+  }
+  .presentation {
+    @include flex-column-center;
+
+    &__localisation-city {
+      background-color: $gris-clair;
+      width: 100%;
+      height: 50px;
+      @include flex-center;
+    }
+
+    &__call-to-action {
+      @include flex-column-center;
+    }
+    &__txt {
+      color: $gris-fonce;
+    }
+
+    &__button {
+      background: linear-gradient($rose-clair, $violet);
+      color: #fff;
+      height: 50px;
+      width: 220px;
+      border-radius: 50px;
+      margin-top: 30px;
+    }
+  }
+  .fonctionnement {
+    margin: 100px 20px;
+    
+    &__order-list {
+      list-style: none;
+    }
+
+    &__detail{
+      border: 2px solid $gris-fonce;
+      border-radius: 20px;
+      padding: 30px;
+      margin: 20px;
+    }
+    &__number{
+      padding: 5px 10px;
+      margin: 5px;
+      background-color: $violet;
+      border-radius: 50px;
+      position: relative;
+      top: 0;
+      right: 50px;
+      color: white;
+    }
+  }
+}
