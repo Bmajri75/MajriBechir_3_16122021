@@ -1,5 +1,5 @@
 // Import et des font
-@import "../../public/css/normalize";
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap");
 
 // import des autres dependances scss
@@ -9,18 +9,20 @@
 
 // Font awesome
 
-// le calcule des box inclue les bordure
-* {
-  box-sizing: border-box;
-}
-body {
-  font-family: "Roboto", sans-serif;
-}
+
 
 @media screen and (max-width: 470px) {
-  .header{
+// le calcule des box inclue les bordure
 
-   &__title {
+  *{
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .header {
+    &__title {
       font-family: "Shrikhand", cursive;
       @include flex-center;
     }
@@ -32,7 +34,7 @@ body {
       @include flex-center;
     }
   }
-  
+
   .presentation {
     @include flex-column-center;
     background-color: $gris-clair;
@@ -58,41 +60,111 @@ body {
     margin: 50px 20px;
 
     &__order-list {
-      list-style: none;
-      padding: 0px;
+     @include liste--style;
     }
 
-    &__detail{
+    &__detail {
       border: none;
       box-shadow: 5px 10px 20px $gris-fonce;
       border-radius: 20px;
       padding: 30px;
-      margin: 40px 0;
+      margin: 40px 10px;
       font-size: 15px;
       font-weight: 700;
     }
-    &__detail--violet{
+    &__detail--violet {
       background-color: #ded1ee;
-      #fas--violet{
+      #fas--violet {
         color: $violet;
       }
     }
 
-    &__number{
+    &__number {
       padding: 5px 10px;
       margin: 5px;
       background-color: $violet;
       border-radius: 50px;
       position: relative;
-      top: 0;
-      right: 50px;
+      right: 48px;
       color: white;
     }
 
-    .fas{
+    .fas {
       padding: 0px 25px 0 0;
       font-size: 20px;
       color: $gris-tres-fonce;
+    }
+  }
+
+  .restaurant {
+    background-color: $gris-clair;
+    padding: 50px 0px;
+
+    &__title{
+      margin-left: 20px;
+    }
+    &__detail {
+      margin: 20px;
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 5px 10px 20px $gris-fonce;
+
+    }
+
+    &__nouveau {
+      position: absolute;
+      left: 260px;
+      color: green;
+      background-color: #87e487;
+      padding: 5px;
+      width: 100px;
+      text-align: center;
+    }
+
+    &__img {
+      width: 100%;
+      height: 200px;
+      border-radius: 20px 20px 0 0;
+
+    }
+    &__description {
+      padding: 0px 0px 20px 20px;
+      line-height: 5px;
+
+    }
+
+    .fa-heart{
+      position: absolute;
+      right: 50px;
+      font-size: 30px;
+      font-weight: lighter;
+
+    }
+  }
+
+  .footer{
+    padding-bottom: 30px;
+  
+    background-color: rgb(43, 43, 43);
+    color: white;
+    &__title{
+      font-family: "Shrikhand", cursive;
+      font-size: 20px;
+      margin: 0px;
+      padding: 20px;
+
+    }
+
+    &__liste{
+      display: flex;
+      flex-direction: column;
+      margin-left: 20px;
+      line-height: 25px;
+    @include liste--style
+    }
+
+    li{
+      padding: 5px;
     }
   }
 }

@@ -11,3 +11,8 @@
     align-items: center;
     text-align: center;
 }
+
+@mixin liste--style {
+    list-style: none;
+    padding: 0px;
+}
