@@ -7,6 +7,10 @@
   body {
     font-family: "Roboto", sans-serif;
   }
+  body a {
+    text-decoration: none;
+    color: black;
+  }
 
   .header__title {
     font-family: "Shrikhand", cursive;
@@ -43,7 +47,7 @@
   }
   .presentation__button {
     background: linear-gradient(#FF79DA, #9356DC);
-    color: #fff;
+    color: #FFF;
     height: 50px;
     width: 220px;
     border-radius: 50px;
@@ -79,9 +83,19 @@
     border-radius: 50px;
     position: relative;
     right: 48px;
-    color: white;
+    color: #FFF;
   }
-  .fonctionnement .fas {
+  .fonctionnement .fa-mobile-alt {
+    padding: 0px 25px 0 0;
+    font-size: 20px;
+    color: #858383;
+  }
+  .fonctionnement .fa-list-ul {
+    padding: 0px 25px 0 0;
+    font-size: 20px;
+    color: #858383;
+  }
+  .fonctionnement .fa-store {
     padding: 0px 25px 0 0;
     font-size: 20px;
     color: #858383;
@@ -96,9 +110,10 @@
   }
   .restaurant__detail {
     margin: 20px;
-    background-color: white;
+    background-color: #FFF;
     border-radius: 20px;
     box-shadow: 5px 10px 20px #cac8c8;
+    border-radius: 20px;
   }
   .restaurant__nouveau {
     position: absolute;
@@ -128,7 +143,7 @@
   .footer {
     padding-bottom: 30px;
     background-color: #2b2b2b;
-    color: white;
+    color: #FFF;
   }
   .footer__title {
     font-family: "Shrikhand", cursive;

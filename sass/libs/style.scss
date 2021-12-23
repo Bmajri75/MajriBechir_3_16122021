@@ -19,6 +19,10 @@
   }
   body {
     font-family: "Roboto", sans-serif;
+    a{
+      text-decoration: none;
+      color: black;
+    }
   }
   
   .header {
@@ -49,7 +53,7 @@
 
     &__button {
       background: linear-gradient($rose-clair, $violet);
-      color: #fff;
+      color: $blamc;
       height: 50px;
       width: 220px;
       border-radius: 50px;
@@ -60,13 +64,12 @@
     margin: 50px 20px;
 
     &__order-list {
-     @include liste--style;
+     @include liste-style;
     }
 
     &__detail {
       border: none;
-      box-shadow: 5px 10px 20px $gris-fonce;
-      border-radius: 20px;
+      @include box-shadow(5px, 10px, 20px, $gris-fonce);
       padding: 30px;
       margin: 40px 10px;
       font-size: 15px;
@@ -86,13 +89,16 @@
       border-radius: 50px;
       position: relative;
       right: 48px;
-      color: white;
+      color: $blamc;
     }
-
-    .fas {
-      padding: 0px 25px 0 0;
-      font-size: 20px;
-      color: $gris-tres-fonce;
+    .fa-mobile-alt {
+     @include mini-logo;
+    }
+    .fa-list-ul{
+    @include mini-logo;
+    }
+    .fa-store{
+      @include mini-logo;
     }
   }
 
@@ -105,9 +111,9 @@
     }
     &__detail {
       margin: 20px;
-      background-color: white;
+      background-color: $blamc;
       border-radius: 20px;
-      box-shadow: 5px 10px 20px $gris-fonce;
+      @include box-shadow(5px, 10px, 20px, $gris-fonce);
 
     }
 
@@ -138,33 +144,30 @@
       right: 50px;
       font-size: 30px;
       font-weight: lighter;
-
     }
   }
-
   .footer{
     padding-bottom: 30px;
-  
     background-color: rgb(43, 43, 43);
-    color: white;
+    color: $blamc;
     &__title{
       font-family: "Shrikhand", cursive;
       font-size: 20px;
       margin: 0px;
       padding: 20px;
-
     }
-
     &__liste{
       display: flex;
       flex-direction: column;
       margin-left: 20px;
       line-height: 25px;
-    @include liste--style
+    @include liste-style
     }
-
     li{
       padding: 5px;
     }
   }
 }
+
+
+// le css des pages de chaque restaurant commence ici
