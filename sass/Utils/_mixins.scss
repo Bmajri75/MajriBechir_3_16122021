@@ -1,0 +1,55 @@
+// Flexboxe center
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// flexbox column center avec alignement des texte
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+// suppression des liste
+@mixin liste-style {
+  list-style: none;
+  padding: 0px;
+}
+
+// les buttons
+@mixin btn {
+  background: linear-gradient($rose-clair, $violet);
+  color: $blamc;
+  height: 50px;
+  width: 220px;
+  border-radius: 50px;
+  margin-top: 30px;
+}
+
+// le menu de navigation
+
+@mixin fonctionnement-nav {
+  border: none;
+  @include box-shadow(5px, 10px, 20px, $gris-fonce);
+  padding: 30px;
+  margin: 40px 10px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+
+
+
+// Mixin Pour la box shadow
+@mixin box-shadow($offset-x, $offset-y, $blur-radius, $color) {
+  box-shadow: $offset-x $offset-y $blur-radius $color;
+  border-radius: 20px;
+}
+
+@mixin mini-logo {
+  padding: 0px 25px 0 0;
+  font-size: 20px;
+  color: $gris-tres-fonce;
+}

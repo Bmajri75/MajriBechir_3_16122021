@@ -70,12 +70,6 @@
     font-size: 15px;
     font-weight: 700;
   }
-  .fonctionnement__detail--violet {
-    background-color: #ded1ee;
-  }
-  .fonctionnement__detail--violet #fas--violet {
-    color: #9356DC;
-  }
   .fonctionnement__number {
     padding: 5px 10px;
     margin: 5px;

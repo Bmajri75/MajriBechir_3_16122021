@@ -3,9 +3,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap");
 
 // import des autres dependances scss
-@import "./_variables";
-@import "./_placeholders";
-@import "./_mixins";
+@import "./Utils/variables";
+@import "./Utils/_mixins";
 
 // Font awesome
 
@@ -51,13 +50,8 @@
       color: $gris-tres-fonce;
     }
 
-    &__button {
-      background: linear-gradient($rose-clair, $violet);
-      color: $blamc;
-      height: 50px;
-      width: 220px;
-      border-radius: 50px;
-      margin-top: 30px;
+    &__button{
+      @include btn;
     }
   }
   .fonctionnement {
@@ -68,19 +62,12 @@
     }
 
     &__detail {
-      border: none;
-      @include box-shadow(5px, 10px, 20px, $gris-fonce);
-      padding: 30px;
-      margin: 40px 10px;
-      font-size: 15px;
-      font-weight: 700;
+      @include fonctionnement-nav;
     }
-    &__detail--violet {
-      background-color: #ded1ee;
-      #fas--violet {
-        color: $violet;
-      }
-    }
+    
+  //&__detail--violet {
+  //    @include fonctionnement-nav--violet
+   // }
 
     &__number {
       padding: 5px 10px;
@@ -171,3 +158,18 @@
 
 
 // le css des pages de chaque restaurant commence ici
+
+
+// La PALETTE DU GOUT 
+
+// HEADER 
+
+// 1 Cree des partiel 
+// _footer, _header, _main _nav, etc...
+
+// 2 faire l'import de mes partiel
+
+//3 importer pour header et footer et le reste des pages
+
+//4 import normalize renomer  _normalize.scss
+
