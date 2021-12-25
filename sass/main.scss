@@ -1,43 +1,23 @@
-// Import et des font
+// import Vendors
+@import "./Vendors/normalize";
 
+// Import et des font
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap");
 
-// import des autres dependances scss
+// import des autres Utils
 @import "./Utils/variables";
 @import "./Utils/_mixins";
 
-// Font awesome
+// Import des Bases 
+@import "./Base/base";
 
+//  Import les LAYOUT
+@import "./Layout/header";
+@import "./Layout/_nav";
+@import "./Layout/_footer";
 
 
 @media screen and (max-width: 470px) {
-// le calcule des box inclue les bordure
-
-  *{
-    box-sizing: border-box;
-  }
-  body {
-    font-family: "Roboto", sans-serif;
-    a{
-      text-decoration: none;
-      color: black;
-    }
-  }
-  
-  .header {
-    &__title {
-      font-family: "Shrikhand", cursive;
-      @include flex-center;
-    }
-    &__localisation-city {
-      background-color: $gris-fonce;
-      width: 100%;
-      height: 50px;
-      margin: 0;
-      @include flex-center;
-    }
-  }
-
   .presentation {
     @include flex-column-center;
     background-color: $gris-clair;
@@ -54,40 +34,6 @@
       @include btn;
     }
   }
-  .fonctionnement {
-    margin: 50px 20px;
-
-    &__order-list {
-     @include liste-style;
-    }
-
-    &__detail {
-      @include fonctionnement-nav;
-    }
-    
-  //&__detail--violet {
-  //    @include fonctionnement-nav--violet
-   // }
-
-    &__number {
-      padding: 5px 10px;
-      margin: 5px;
-      background-color: $violet;
-      border-radius: 50px;
-      position: relative;
-      right: 48px;
-      color: $blamc;
-    }
-    .fa-mobile-alt {
-     @include mini-logo;
-    }
-    .fa-list-ul{
-    @include mini-logo;
-    }
-    .fa-store{
-      @include mini-logo;
-    }
-  }
 
   .restaurant {
     background-color: $gris-clair;
@@ -96,6 +42,7 @@
     &__title{
       margin-left: 20px;
     }
+
     &__detail {
       margin: 20px;
       background-color: $blamc;
@@ -127,49 +74,10 @@
     }
 
     .fa-heart{
-      position: absolute;
-      right: 50px;
-      font-size: 30px;
-      font-weight: lighter;
+     @include heartAwerson;
     }
   }
-  .footer{
-    padding-bottom: 30px;
-    background-color: rgb(43, 43, 43);
-    color: $blamc;
-    &__title{
-      font-family: "Shrikhand", cursive;
-      font-size: 20px;
-      margin: 0px;
-      padding: 20px;
-    }
-    &__liste{
-      display: flex;
-      flex-direction: column;
-      margin-left: 20px;
-      line-height: 25px;
-    @include liste-style
-    }
-    li{
-      padding: 5px;
-    }
-  }
+  
+  
+  
 }
-
-
-// le css des pages de chaque restaurant commence ici
-
-
-// La PALETTE DU GOUT 
-
-// HEADER 
-
-// 1 Cree des partiel 
-// _footer, _header, _main _nav, etc...
-
-// 2 faire l'import de mes partiel
-
-//3 importer pour header et footer et le reste des pages
-
-//4 import normalize renomer  _normalize.scss
-

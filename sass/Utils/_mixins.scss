@@ -29,8 +29,7 @@
 }
 
 // le menu de navigation
-
-@mixin fonctionnement-nav {
+@mixin btn-nav {
   border: none;
   @include box-shadow(5px, 10px, 20px, $gris-fonce);
   padding: 30px;
@@ -40,16 +39,39 @@
 }
 
 
-
-
 // Mixin Pour la box shadow
 @mixin box-shadow($offset-x, $offset-y, $blur-radius, $color) {
   box-shadow: $offset-x $offset-y $blur-radius $color;
   border-radius: 20px;
 }
 
-@mixin mini-logo {
+
+@mixin fontAwersom ($color) {
   padding: 0px 25px 0 0;
   font-size: 20px;
-  color: $gris-tres-fonce;
+  color: $color;
+}
+
+@mixin nav-hover {
+    &:hover{
+        background-color: $violet-clair;
+        color: $violet;
+    }
+}
+
+@mixin heartAwerson {
+    position: absolute;
+    right: 50px;
+    font-size: 30px;
+    font-weight: lighter;
+    &:hover{
+        background: linear-gradient($rose-clair, $violet);
+
+    
+    }
+}
+
+@mixin header-img-size {
+    height: 100%;
+    width: 100%;
 }

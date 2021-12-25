@@ -1,0 +1,31 @@
+.nav {
+    margin: 50px 20px;
+
+    &__order-list {
+     @include liste-style;
+    }
+
+    &__detail {
+      @include btn-nav;
+      &:hover{
+        background-color: $violet-clair;
+        .nav__detail-font{
+          color: $violet;
+        }
+      }
+    }
+
+    &__detail-font{
+      @include fontAwersom($gris-tres-fonce);
+    }
+    
+    &__nbr {
+      padding: 5px 10px;
+      margin: 5px;
+      background-color: $violet;
+      border-radius: 50px;
+      position: relative;
+      right: 48px;
+      color: $blamc;
+    }
+}

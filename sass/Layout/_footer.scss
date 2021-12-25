@@ -1,0 +1,21 @@
+.footer{
+    padding-bottom: 30px;
+    background-color: rgb(43, 43, 43);
+    color: $blamc;
+    &__title{
+      font-family: "Shrikhand", cursive;
+      font-size: 20px;
+      margin: 0px;
+      padding: 20px;
+    }
+    &__liste{
+      display: flex;
+      flex-direction: column;
+      margin-left: 20px;
+      line-height: 25px;
+    @include liste-style
+    }
+    li{
+      padding: 5px;
+    }
+  }
