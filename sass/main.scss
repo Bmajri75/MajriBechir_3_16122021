@@ -8,14 +8,13 @@
 @import "./Utils/variables";
 @import "./Utils/_mixins";
 
-// Import des Bases 
+// Import des Bases
 @import "./Base/base";
 
 //  Import les LAYOUT
 @import "./Layout/header";
 @import "./Layout/_nav";
 @import "./Layout/_footer";
-
 
 @media screen and (max-width: 470px) {
   .presentation {
@@ -30,7 +29,7 @@
       color: $gris-tres-fonce;
     }
 
-    &__button{
+    &__button {
       @include btn;
     }
   }
@@ -39,7 +38,7 @@
     background-color: $gris-clair;
     padding: 50px 0px;
 
-    &__title{
+    &__title {
       margin-left: 20px;
     }
 
@@ -48,7 +47,6 @@
       background-color: $blamc;
       border-radius: 20px;
       @include box-shadow(5px, 10px, 20px, $gris-fonce);
-
     }
 
     &__nouveau {
@@ -65,19 +63,61 @@
       width: 100%;
       height: 200px;
       border-radius: 20px 20px 0 0;
-
     }
     &__description {
       padding: 0px 0px 20px 20px;
       line-height: 5px;
-
     }
 
-    .fa-heart{
-     @include heartAwerson;
+    .fa-heart {
+      @include heartAwerson;
     }
   }
-  
-  
-  
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: $gris-clair;
+    border-radius: 25px 25px 0 0;
+    width: 100%;
+    position: relative;
+    top: -30px;
+    &__menu {
+
+    }
+
+    &__menu__title {
+      font-family: "Shrikhand", cursive;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0 40px;
+      font-size: 15px;
+      &__heart{
+      font-size: 20px;
+        &:hover{
+          background: linear-gradient($rose-clair, $violet);
+        }
+      }
+    }
+
+    &__menu__cat {
+      h2{
+        padding-left: 20px;
+        font-weight: 100;
+        font-size: 15px;
+        color: $gris-tres-fonce;
+        text-transform : uppercase;
+      }
+
+      &__plat{
+        margin: 20px;
+        padding: 5px;
+        @include box-shadow(5px, 10px, 20px, $gris-tres-fonce);
+        background-color: $gris-clair;
+      }
+    }
+
+  }
 }
