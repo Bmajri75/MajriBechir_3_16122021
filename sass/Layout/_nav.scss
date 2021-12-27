@@ -9,6 +9,7 @@
       @include btn-nav;
       &:hover{
         background-color: $violet-clair;
+        box-shadow: 10px 5px 5px $gris-tres-fonce;
         .nav__detail-font{
           color: $violet;
         }

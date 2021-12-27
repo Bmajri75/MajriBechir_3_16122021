@@ -9,11 +9,13 @@
     }
 
     hr{
-      color:  $vert-clair;
-      width: 50px;
+      background-color:  $vert-clair;
+      border: none;
+      height: 1px;
+      width: 40px;
 position: relative;  
 top: 0;
-right: 170px;
+right: 180px;
 
 }
   }

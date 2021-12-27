@@ -26,18 +26,11 @@
   width: 220px;
   border-radius: 50px;
   margin-top: 30px;
+  &:hover {
+      @include box-shadow(5px, 10px, 20px, $gris-fonce);
+      opacity: 0.80;
+  }
 }
-
-// le menu de navigation
-@mixin btn-nav {
-  border: none;
-  @include box-shadow(5px, 10px, 20px, $gris-fonce);
-  padding: 30px;
-  margin: 40px 10px;
-  font-size: 15px;
-  font-weight: 700;
-}
-
 
 // Mixin Pour la box shadow
 @mixin box-shadow($offset-x, $offset-y, $blur-radius, $color) {
@@ -45,6 +38,15 @@
   border-radius: 20px;
 }
 
+// le menu de navigation
+@mixin btn-nav {
+    border: none;
+    @include box-shadow(5px, 10px, 20px, $gris-fonce);
+    padding: 30px;
+    margin: 40px 10px;
+    font-size: 15px;
+    font-weight: 700;
+  }
 
 @mixin fontAwersom ($color) {
   padding: 0px 25px 0 0;

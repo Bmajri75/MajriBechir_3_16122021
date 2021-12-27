@@ -83,9 +83,7 @@
     width: 100%;
     position: relative;
     top: -30px;
-    &__menu {
-
-    }
+    
 
     &__menu__title {
       font-family: "Shrikhand", cursive;
@@ -109,14 +107,26 @@
         font-size: 15px;
         color: $gris-tres-fonce;
         text-transform : uppercase;
+        
       }
 
       &__plat{
         margin: 20px;
-        padding: 5px;
+        padding: 8px 10px;
         @include box-shadow(5px, 10px, 20px, $gris-tres-fonce);
         background-color: $gris-clair;
+        line-height:5px;
+
+        &__name{
+          font-weight: bold;
+        }
+
+        &__price{
+          margin-left: 20px;
+          font-weight: bold;
+        }
       }
+
     }
 
   }

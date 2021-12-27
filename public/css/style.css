@@ -34,7 +34,6 @@ main {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 h1 {
-  font-size: 2em;
   margin: 0.67em 0;
 }
 
@@ -349,6 +348,15 @@ body a {
   text-decoration: none;
   color: black;
 }
+body hr {
+  background-color: #99E2D0;
+  border: none;
+  height: 1px;
+  width: 40px;
+  position: relative;
+  top: 0;
+  right: 180px;
+}
 
 .header__title {
   font-family: "Shrikhand", cursive;
@@ -396,6 +404,7 @@ body a {
 }
 .nav__detail:hover {
   background-color: #cdb8e6;
+  box-shadow: 10px 5px 5px #858383;
 }
 .nav__detail:hover .nav__detail-font {
   color: #9356DC;
@@ -464,6 +473,11 @@ body a {
     border-radius: 50px;
     margin-top: 30px;
   }
+  .presentation__button:hover {
+    box-shadow: 5px 10px 20px #cac8c8;
+    border-radius: 20px;
+    opacity: 0.8;
+  }
 
   .restaurant {
     background-color: #e8e7e7;
@@ -505,6 +519,53 @@ body a {
   }
   .restaurant .fa-heart:hover {
     background: linear-gradient(#FF79DA, #9356DC);
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #e8e7e7;
+    border-radius: 25px 25px 0 0;
+    width: 100%;
+    position: relative;
+    top: -30px;
+  }
+  .container__menu__title {
+    font-family: "Shrikhand", cursive;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 40px;
+    font-size: 15px;
+  }
+  .container__menu__title__heart {
+    font-size: 20px;
+  }
+  .container__menu__title__heart:hover {
+    background: linear-gradient(#FF79DA, #9356DC);
+  }
+  .container__menu__cat h2 {
+    padding-left: 20px;
+    font-weight: 100;
+    font-size: 15px;
+    color: #858383;
+    text-transform: uppercase;
+  }
+  .container__menu__cat__plat {
+    margin: 20px;
+    padding: 8px 10px;
+    box-shadow: 5px 10px 20px #858383;
+    border-radius: 20px;
+    background-color: #e8e7e7;
+    line-height: 5px;
+  }
+  .container__menu__cat__plat__name {
+    font-weight: bold;
+  }
+  .container__menu__cat__plat__price {
+    margin-left: 20px;
+    font-weight: bold;
   }
 }
 
