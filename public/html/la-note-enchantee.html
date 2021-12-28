@@ -1,21 +1,113 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../css/style.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-            integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-        <title>ohMyFood</title>
-    </head>
-    <body>
-        <header class="header">
-            <h1 class="header__title">ohmyfood</h1>
-            <img src="" alt="">
-        </header>
-        <body>
-            
-        </body>
-        <footer></footer>
-    </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <title>ohMyFood</title>
+</head>
+
+<body>
+    <header class="header">
+        <a href="../../index.html">
+            <p><i class="fas fa-arrow-left header__back"></i></p>
+        </a>
+        <h1 class="header__title">ohmyfood</h1>
+        <img class="header__img" src="../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+            alt="en fond de page un Plat vegetal food">
+    </header>
+
+    <main>
+        <div class="container__menu">
+            <div class=" container__menu__title">
+                <h1>La note enchantée</h1>
+                <p><i class="far fa-heart container__menu__title__heart"></i></p>
+            </div>
+            <!--Les Entrees -->
+            <div class="container__menu__cat">
+                <h2>Entrées <br>
+                    <hr>
+                </h2>
+                <div class="container__menu__cat__plat">
+                    <h3 class="container__menu__cat__plat__name">Ravioles de foie gras</h3>
+                    <p>Accompagnés de leur crème à la truffe<span class="container__menu__cat__plat__price">25€</span>
+                    </p>
+                </div>
+                <div class="container__menu__cat__plat">
+                    <h3 class="container__menu__cat__plat__name">Caviar osciètre </h3>
+                    <p>Sur blini à la farine de blé noir<span
+                            class="container__menu__cat__plat__price">35€</span></p>
+                </div>
+                <div class="container__menu__cat__plat">
+                    <h3 class="container__menu__cat__plat__name">Homard et espuma de potiron</h3>
+                    <p>Mariné aux zestes d'orange<span class="container__menu__cat__plat__price"> 20€</span></p>
+                </div>
+                <div class="container__menu__cat__plat">
+                    <h3 class="container__menu__cat__plat__name">Foie gras de canard cuit entier</h3>
+                    <p>Confiture de figue et pain toasté<span class="container__menu__cat__plat__price">35€</span></p>
+                </div>
+            </div>
+            <!--Fin des entrees 
+            Les plats -->
+            <div class="container__menu__cat">
+                <h2>Plats<br>
+                    <hr>
+                </h2>
+                <div class="container__menu__cat__plat">
+                    <h3 class="container__menu__cat__plat__name">Noix de coquilles Saint-Jacques</h3>
+                    <p>Sur lit de purée de céleri-rave <span class="container__menu__cat__plat__price">40€</span></p>
+                </div>
+                <div class="container__menu__cat__plat">
+                    <h3 class="container__menu__cat__plat__name">Langoustine poêlée</h3>
+                    <p>Purée de patate douce<span class="container__menu__cat__plat__price">35€</span></p>
+                </div>
+                <div class="container__menu__cat__plat">
+                    <h3 class="container__menu__cat__plat__name">Mijoté de queue de boeuf </h3>
+                    <p>Et riz sauvage aux zestes de citron <span class="container__menu__cat__plat__price">
+                            44€</span></p>
+                </div>
+            </div>
+            <!--La fin des Plats
+                Debut des Desserts  -->
+            <div class="container__menu__cat">
+                <h2>Desserts <br>
+                    <hr>
+                </h2>
+                <div class="container__menu__cat__plat">
+                    <h3 class="container__menu__cat__plat__name">Macaron noisette et chocolat</h3>
+                    <p>Glace au caramel brun et sel de Guérande<span class="container__menu__cat__plat__price">18€</span>
+                    </p>
+                </div>
+                <div class="container__menu__cat__plat">
+                    <h3 class="container__menu__cat__plat__name">Baba au rhum revisité</h3>
+                    <p>Avec son coulis de citron<span class="container__menu__cat__plat__price">22€</span></p>
+                </div>
+                <div class="container__menu__cat__plat">
+                    <h3 class="container__menu__cat__plat__name">Tarte au citron meringuée </h3>
+                    <p>Déstructurée<span
+                            class="container__menu__cat__plat__price">23€</span></p>
+                </div>  
+            </div>
+            <button class="btn" type="button">
+                Commander
+            </button>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <h1 class="footer__title">ohMyFood</h1>
+            <ul class="footer__liste">
+                <li><i class="fas fa-utensils"></i> Proposer un restaurant</li>
+                <li><i class="fas fa-hands-helping"></i>Devenir Partenaire</li>
+                <li>Mention légales</li>
+                <li> <a href="mailto:#"> Contact</li></a>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>

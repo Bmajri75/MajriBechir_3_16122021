@@ -74,18 +74,16 @@
     }
   }
 
-  .container {
+  .container__menu {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    background-color: $gris-clair;
+    background-color: #fff;
     border-radius: 25px 25px 0 0;
     width: 100%;
     position: relative;
-    top: -30px;
-    
+    top: -30px;    
 
-    &__menu__title {
+    &__title {
       font-family: "Shrikhand", cursive;
       display: flex;
       align-items: center;
@@ -100,21 +98,21 @@
       }
     }
 
-    &__menu__cat {
+    &__cat {
       h2{
         padding-left: 20px;
         font-weight: 100;
         font-size: 15px;
         color: $gris-tres-fonce;
         text-transform : uppercase;
-        
+
       }
 
       &__plat{
-        margin: 20px;
+        margin: 20px 20px;
         padding: 8px 10px;
         @include box-shadow(5px, 10px, 20px, $gris-tres-fonce);
-        background-color: $gris-clair;
+        background-color: $blamc;
         line-height:5px;
 
         &__name{
@@ -126,8 +124,20 @@
           font-weight: bold;
         }
       }
+      p{
+        display: flex;
+        justify-content: space-between;
+      }
 
     }
+
+  }
+
+  .btn{
+    @include btn;
+   align-items: center;
+   margin-left: auto;
+   margin-right: auto;
 
   }
 }
