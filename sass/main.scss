@@ -1,20 +1,21 @@
+
 // import Vendors
-@import "./Vendors/normalize";
+@import "./Vendors/_normalize";
 
 // Import et des font
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap");
 
 // import des autres Utils
 @import "./Utils/variables";
-@import "./Utils/_mixins";
+@import "./Utils/mixins";
 
 // Import des Bases
 @import "./Base/base";
 
 //  Import les LAYOUT
 @import "./Layout/header";
-@import "./Layout/_nav";
-@import "./Layout/_footer";
+@import "./Layout/nav";
+@import "./Layout/footer";
 
 @media screen and (max-width: 470px) {
   .presentation {
@@ -51,7 +52,7 @@
 
     &__nouveau {
       position: absolute;
-      left: 70%;
+      left: 60%;
       color: green;
       background-color: #87e487;
       padding: 1% 3%;

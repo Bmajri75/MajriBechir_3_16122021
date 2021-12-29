@@ -337,11 +337,8 @@ template {
   display: none;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 body {
+  box-sizing: border-box;
   width: 100%;
   margin: 0 auto;
   font-family: "Roboto", sans-serif;
@@ -378,8 +375,8 @@ body hr main {
   justify-content: center;
 }
 .header__back {
-  padding: 0px 25px 0 0;
-  font-size: 20px;
+  padding: 0px 20px 0 0;
+  font-size: 15px;
   color: #000000;
   position: absolute;
   top: 30px;
@@ -401,8 +398,8 @@ body hr main {
   border: none;
   box-shadow: 5px 10px 20px #cac8c8;
   border-radius: 10px;
-  padding: 30px;
-  margin: 40px 10px;
+  padding: 20px;
+  margin: 20px 0px;
   font-size: 12px;
   font-weight: 700;
 }
@@ -414,8 +411,8 @@ body hr main {
   color: #9356DC;
 }
 .nav__detail-font {
-  padding: 0px 25px 0 0;
-  font-size: 20px;
+  padding: 0px 20px 0 0;
+  font-size: 15px;
   color: #858383;
 }
 .nav__nbr {
@@ -424,7 +421,7 @@ body hr main {
   background-color: #9356DC;
   border-radius: 50px;
   position: relative;
-  right: 48px;
+  right: 37px;
   color: #FFF;
 }
 
@@ -503,7 +500,7 @@ body hr main {
   }
   .restaurant__nouveau {
     position: absolute;
-    left: 70%;
+    left: 60%;
     color: green;
     background-color: #87e487;
     padding: 1% 3%;
