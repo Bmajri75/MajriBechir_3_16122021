@@ -1,27 +1,24 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  margin: 0 auto;
+  font-family: "Roboto", sans-serif;
+  a {
+    text-decoration: none;
+    color: black;
   }
-  body {
-    font-family: "Roboto", sans-serif;
-    a{
-      text-decoration: none;
-      color: black;
+
+  hr {
+    background-color: $vert-clair;
+    border: none;
+    height: 1px;
+    width: 40px;
+    margin: 0;
+    padding: 0%;
+    main {
+      margin: 0px;
     }
-
-    hr{
-      background-color:  $vert-clair;
-      border: none;
-      height: 1px;
-      width: 40px;
-position: relative;  
-top: 0;
-right: 180px;
-main{
-  margin: 0px;
-}
-
-}
   }
-
-
-  
+}

@@ -29,13 +29,14 @@
   &:hover {
       @include box-shadow(5px, 10px, 20px, $gris-fonce);
       opacity: 0.80;
+      border-radius: 50px;
   }
 }
 
 // Mixin Pour la box shadow
 @mixin box-shadow($offset-x, $offset-y, $blur-radius, $color) {
   box-shadow: $offset-x $offset-y $blur-radius $color;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 // le menu de navigation
@@ -44,7 +45,7 @@
     @include box-shadow(5px, 10px, 20px, $gris-fonce);
     padding: 30px;
     margin: 40px 10px;
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 700;
   }
 
@@ -64,7 +65,7 @@
 @mixin heartAwerson {
     position: absolute;
     right: 50px;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: lighter;
     &:hover{
         background: linear-gradient($rose-clair, $violet);
