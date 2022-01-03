@@ -48,7 +48,7 @@
       }
 
       &__plat {
-        @include box-shadow(5px, 10px, 20px, $gris-tres-fonce);
+        box-shadow: 0px 0px 27px 12px $gris-tres-fonce;
         font-size: 12px;
         padding: 8px 10px;
         display: flex;

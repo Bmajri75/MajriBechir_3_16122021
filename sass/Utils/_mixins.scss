@@ -27,9 +27,11 @@
   border-radius: 50px;
   margin-top: 30px;
   &:hover {
-      @include box-shadow(5px, 10px, 20px, $gris-fonce);
+    box-shadow: 0px 0px 27px 12px $gris-clair;
       opacity: 0.80;
       border-radius: 50px;
+      height: 55px;
+      width: 225px;
   }
 }
 
@@ -43,16 +45,12 @@
       font-size: 100%;
       text-align: center;
 }
-// Mixin Pour la box shadow
-@mixin box-shadow($offset-x, $offset-y, $blur-radius, $color) {
-  box-shadow: $offset-x $offset-y $blur-radius $color;
-  border-radius: 10px;
-}
+
 
 // le menu de navigation
 @mixin btn-nav {
     border: none;
-    @include box-shadow(5px, 10px, 20px, $gris-fonce);
+  box-shadow: 0px 0px 27px 12px $gris-clair;        
     padding: 20px;
     margin: 20px 0px;
     font-size: 12px;
@@ -72,17 +70,6 @@
     }
 }
 
-@mixin heartAwerson {
-    position: absolute;
-    right: 15px;
-    font-size: 20px;
-    font-weight: lighter;
-    &:hover{
-        background: linear-gradient($rose-clair, $violet);
-
-    
-    }
-}
 
 @mixin header-img-size {
     height: 300px;
@@ -93,7 +80,7 @@
 @mixin restaurant-patch{
   margin: 20px;
   background-color: $blamc;
-  @include box-shadow(5px, 10px, 20px, $gris-fonce);
+  box-shadow: 0px 0px 27px 12px $gris-clair;
   border-radius: 20px;
   position: relative;
 }

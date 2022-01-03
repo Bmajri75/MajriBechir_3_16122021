@@ -372,10 +372,40 @@ body hr main {
   margin-right: auto;
 }
 .btn:hover {
-  box-shadow: 5px 10px 20px #cac8c8;
-  border-radius: 10px;
+  box-shadow: 0px 0px 27px 12px #ecebeb;
   opacity: 0.8;
   border-radius: 50px;
+  height: 55px;
+  width: 225px;
+}
+
+.fas.fa-heart {
+  position: absolute;
+  right: 15px;
+  top: 220px;
+  font-size: 30px;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 0;
+  transition: all 2s ease-in-out;
+}
+.fas.fa-heart:hover {
+  opacity: 1;
+  transform: scale(1.5);
+}
+
+.far.fa-heart {
+  position: absolute;
+  right: 15px;
+  top: 220px;
+  right: 15px;
+  font-size: 30px;
+  opacity: 0.8;
+}
+.far.fa-heart:hover {
+  opacity: 0;
 }
 
 .header__title {
@@ -432,10 +462,11 @@ body hr main {
   margin-top: 30px;
 }
 .presentation__button:hover {
-  box-shadow: 5px 10px 20px #cac8c8;
-  border-radius: 10px;
+  box-shadow: 0px 0px 27px 12px #ecebeb;
   opacity: 0.8;
   border-radius: 50px;
+  height: 55px;
+  width: 225px;
 }
 
 .nav {
@@ -447,16 +478,15 @@ body hr main {
 }
 .nav__detail {
   border: none;
-  box-shadow: 5px 10px 20px #cac8c8;
-  border-radius: 10px;
+  box-shadow: 0px 0px 27px 12px #ecebeb;
   padding: 20px;
   margin: 20px 0px;
   font-size: 12px;
   font-weight: 700;
+  border-radius: 10px;
 }
 .nav__detail:hover {
   background-color: #cdb8e6;
-  box-shadow: 10px 5px 5px #858383;
 }
 .nav__detail:hover .nav__detail-font {
   color: #9356DC;
@@ -549,8 +579,7 @@ body hr main {
   margin-left: 5%;
 }
 .container__menu__cat__plat {
-  box-shadow: 5px 10px 20px #858383;
-  border-radius: 10px;
+  box-shadow: 0px 0px 27px 12px #858383;
   font-size: 12px;
   padding: 8px 10px;
   display: flex;
@@ -586,8 +615,7 @@ body hr main {
   .restaurant__detail {
     margin: 20px;
     background-color: #FFF;
-    box-shadow: 5px 10px 20px #cac8c8;
-    border-radius: 10px;
+    box-shadow: 0px 0px 27px 12px #ecebeb;
     border-radius: 20px;
     position: relative;
   }
@@ -609,15 +637,6 @@ body hr main {
   .restaurant__description {
     padding: 0px 10px 15px 20px;
     line-height: 5px;
-  }
-  .restaurant .fa-heart {
-    position: absolute;
-    right: 15px;
-    font-size: 20px;
-    font-weight: lighter;
-  }
-  .restaurant .fa-heart:hover {
-    background: linear-gradient(#FF79DA, #9356DC);
   }
 }
 @media screen and (min-width: 470px) {
@@ -667,8 +686,7 @@ body hr main {
     align-items: center;
     margin: 20px;
     background-color: #FFF;
-    box-shadow: 5px 10px 20px #cac8c8;
-    border-radius: 10px;
+    box-shadow: 0px 0px 27px 12px #ecebeb;
     border-radius: 20px;
     position: relative;
     height: 350px;

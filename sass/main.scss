@@ -13,6 +13,7 @@
 
 // Import des Composent
 @import "./Components/bouton";
+@import "./Components/heart";
 
 //  Import les LAYOUT
 @import "./Layout/header";
@@ -22,6 +23,7 @@
 // les pages anex des restautans
 @import "./Layout/_pageMenu";
 
+// mobil first
 @media screen and (max-width: 470px) {
   .restaurant {
     background-color: $gris-clair;
@@ -48,15 +50,10 @@
       padding: 0px 10px 15px 20px;
       line-height: 5px;
     }
-
-    .fa-heart {
-      @include heartAwerson;
-    }
   }
 }
-//version tablettes 
 
-// version  desk
+// version  desk et tablette
 @media screen and (min-width: 470px) {
   .nav {
     display: flex;
@@ -108,9 +105,8 @@
     }
   }
 
-  .footer{
-
-    &__liste{
+  .footer {
+    &__liste {
       display: flex;
       flex-wrap: wrap;
       flex-direction: inherit;

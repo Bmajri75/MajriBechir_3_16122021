@@ -1,15 +1,14 @@
 .nav {
     margin: 50px 20px;
-
     &__order-list {
      @include liste-style;
     }
 
     &__detail {
       @include btn-nav;
+      border-radius: 10px;
       &:hover{
         background-color: $violet-clair;
-        box-shadow: 10px 5px 5px $gris-tres-fonce;
         .nav__detail-font{
           color: $violet;
         }
