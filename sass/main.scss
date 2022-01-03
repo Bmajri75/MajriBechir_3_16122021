@@ -1,6 +1,5 @@
-
 // import Vendors
-@import "./Vendors/_normalize";
+@import "./Base/_normalize";
 
 // Import et des font
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap");
@@ -12,29 +11,18 @@
 // Import des Bases
 @import "./Base/base";
 
+// Import des Composent
+@import "./Components/bouton";
+
 //  Import les LAYOUT
 @import "./Layout/header";
+@import "./Layout/presentation";
 @import "./Layout/nav";
 @import "./Layout/footer";
+// les pages anex des restautans
+@import "./Layout/_pageMenu";
 
 @media screen and (max-width: 470px) {
-  .presentation {
-    @include flex-column-center;
-    background-color: $gris-clair;
-    padding-bottom: 50px;
-
-    &__call-to-action {
-      @include flex-column-center;
-    }
-    &__txt {
-      color: $gris-tres-fonce;
-    }
-
-    &__button {
-      @include btn;
-    }
-  }
-
   .restaurant {
     background-color: $gris-clair;
     padding: 50px 0px;
@@ -44,20 +32,11 @@
     }
 
     &__detail {
-      margin: 20px;
-      background-color: $blamc;
-      @include box-shadow(5px, 10px, 20px, $gris-fonce);
-      border-radius: 20px;
+      @include restaurant-patch;
     }
 
     &__nouveau {
-      position: absolute;
-      left: 60%;
-      color: green;
-      background-color: #87e487;
-      padding: 1% 3%;
-      font-size: 100%;
-      text-align: center;
+      @include btn-nouveau;
     }
 
     &__img {
@@ -66,7 +45,7 @@
       border-radius: 20px 20px 0 0;
     }
     &__description {
-      padding: 0px 0px 20px 20px;
+      padding: 0px 10px 15px 20px;
       line-height: 5px;
     }
 
@@ -74,90 +53,69 @@
       @include heartAwerson;
     }
   }
+}
+//version tablettes 
 
-  .container__menu {
+// version  desk
+@media screen and (min-width: 470px) {
+  .nav {
     display: flex;
-    flex-direction: column;
-    background-color: #fff;
-    border-radius: 25px 25px 0 0;
-    width: 100%;
-    position: relative;
-    top: -30px;
-
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 10px;
     &__title {
-      font-family: "Shrikhand", cursive;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin: 0 40px;
-      font-size: 15px;
-      &__heart {
-        font-size: 15px;
-        &:hover {
-          background: linear-gradient($rose-clair, $violet);
-        }
-      }
+      display: none;
     }
 
-    &__cat {
+    &__order-list {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: space-evenly;
+    }
+  }
+
+  .restaurant {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    background-color: $gris-clair;
+    padding-top: 100px;
+
+    &__nouveau {
+      @include btn-nouveau;
+    }
+    &__img {
+      border-radius: 5% 5% 0 0;
+      width: 100%;
+      height: 60%;
+    }
+
+    &__detail {
       display: flex;
       flex-direction: column;
-      align-content: center;
-      gap: 20px;
-      margin: 5% 0;
-      h2 {
-        padding: 0%;
-        margin-bottom: 5px;
-        font-weight: 100;
-        font-size: 13px;
-        color: $gris-tres-fonce;
-        text-transform: uppercase;
-      }
-      &__partie {
-        display: flex;
-        flex-direction: column;
-        align-items: baseline;
-        margin-left: 5%;
-      }
+      align-items: center;
+      @include restaurant-patch;
+      height: 350px;
+      width: 350px;
+    }
 
-      &__plat {
-        @include box-shadow(5px, 10px, 20px, $gris-tres-fonce);
-        font-size: 12px;
-        padding: 8px 10px;
-        margin: 0 5%;
-        display: flex;
-        flex-direction: column;
-        background-color: $blamc;
-        gap: 5%;
-
-        &__name {
-          font-weight: bold;
-          margin-bottom: 5% 0%;
-        }
-
-        &__price {
-          margin-left: 20px;
-          font-weight: bold;
-          color: $noir;
-        }
-      }
-      p {
-        display: flex;
-        justify-content: space-between;
-        color: $gris-tres-fonce;
-        margin: 0% 0
-      }
+    &__title {
+      position: absolute;
+      top: 600px;
     }
   }
 
-  .btn {
-    @include btn;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
+  .footer{
 
-// version Tablette et desk
-@media screen and (min-width: 470px) {
+    &__liste{
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: inherit;
+      justify-content: space-around;
+      align-items: center;
+    }
+  }
 }

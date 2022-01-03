@@ -1,0 +1,78 @@
+ // Page des menu de restaurants
+  .container__menu {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 25px 25px 0 0;
+    width: 100%;
+    position: relative;
+    top: -30px;
+
+    &__title {
+      font-family: "Shrikhand", cursive;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0 15px;
+      font-size: 15px;
+      &__heart {
+        font-size: 25px;
+        &:hover {
+          background: linear-gradient($rose-clair, $violet);
+        }
+      }
+    }
+
+    &__cat {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      gap: 20px;
+      margin: 20px;
+      transition-duration: 3s;
+      transition-property: opacity 1;
+
+      h2 {
+        padding: 0%;
+        margin-bottom: 5px;
+        font-weight: 100;
+        font-size: 13px;
+        color: $gris-tres-fonce;
+        text-transform: uppercase;
+      }
+      &__partie {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        margin-left: 5%;
+      }
+
+      &__plat {
+        @include box-shadow(5px, 10px, 20px, $gris-tres-fonce);
+        font-size: 12px;
+        padding: 8px 10px;
+        display: flex;
+        flex-direction: column;
+        background-color: $blamc;
+        gap: 5%;
+
+        &__name {
+          font-weight: bold;
+          margin: 4px 0px 10px 0px;
+        }
+
+        &__price {
+          margin-left: 20px;
+          font-weight: bold;
+          color: $noir;
+        }
+      }
+      p {
+        display: flex;
+        justify-content: space-between;
+        color: $gris-tres-fonce;
+        margin: 0 0 5px 0px ;
+        line-height: 5px;
+      }
+    }
+  }

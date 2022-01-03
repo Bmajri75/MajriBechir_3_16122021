@@ -33,6 +33,16 @@
   }
 }
 
+@mixin btn-nouveau {
+  position: absolute;
+      top: 0;
+      right: 10px;
+      color: green;
+      background-color: #87e487;
+      padding: 1% 3%;
+      font-size: 100%;
+      text-align: center;
+}
 // Mixin Pour la box shadow
 @mixin box-shadow($offset-x, $offset-y, $blur-radius, $color) {
   box-shadow: $offset-x $offset-y $blur-radius $color;
@@ -64,7 +74,7 @@
 
 @mixin heartAwerson {
     position: absolute;
-    right: 50px;
+    right: 15px;
     font-size: 20px;
     font-weight: lighter;
     &:hover{
@@ -77,4 +87,13 @@
 @mixin header-img-size {
     height: 300px;
     width: 100%;
+}
+
+// organisation du restaurant Details
+@mixin restaurant-patch{
+  margin: 20px;
+  background-color: $blamc;
+  @include box-shadow(5px, 10px, 20px, $gris-fonce);
+  border-radius: 20px;
+  position: relative;
 }
