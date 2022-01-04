@@ -2,15 +2,13 @@
     @include flex-column-center;
     background-color: $gris-clair;
     padding-bottom: 50px;
-
-    &__call-to-action {
-      @include flex-column-center;
-    }
     &__txt {
       color: $gris-tres-fonce;
     }
-
-    &__button {
-      @include btn;
-    }
+    &__call-to-action {
+      @include flex-column-center;
+      &__button {
+        @include btn;
+      }
+    }   
   }

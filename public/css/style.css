@@ -379,7 +379,7 @@ body hr main {
   width: 225px;
 }
 
-.fas.fa-heart {
+.restaurant__detail .fas.fa-heart {
   position: absolute;
   right: 15px;
   top: 220px;
@@ -391,12 +391,11 @@ body hr main {
   opacity: 0;
   transition: all 2s ease-in-out;
 }
-.fas.fa-heart:hover {
+.restaurant__detail .fas.fa-heart:hover {
   opacity: 1;
-  transform: scale(1.5);
+  transform: scale(1.2);
 }
-
-.far.fa-heart {
+.restaurant__detail .far.fa-heart {
   position: absolute;
   right: 15px;
   top: 220px;
@@ -404,7 +403,7 @@ body hr main {
   font-size: 30px;
   opacity: 0.8;
 }
-.far.fa-heart:hover {
+.restaurant__detail .far.fa-heart:hover {
   opacity: 0;
 }
 
@@ -444,16 +443,16 @@ body hr main {
   background-color: #ecebeb;
   padding-bottom: 50px;
 }
+.presentation__txt {
+  color: #858383;
+}
 .presentation__call-to-action {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
-.presentation__txt {
-  color: #858383;
-}
-.presentation__button {
+.presentation__call-to-action__button {
   background: linear-gradient(#FF79DA, #9356DC);
   color: #FFF;
   height: 50px;
@@ -461,7 +460,7 @@ body hr main {
   border-radius: 50px;
   margin-top: 30px;
 }
-.presentation__button:hover {
+.presentation__call-to-action__button:hover {
   box-shadow: 0px 0px 27px 12px #ecebeb;
   opacity: 0.8;
   border-radius: 50px;
@@ -549,11 +548,27 @@ body hr main {
   margin: 0 15px;
   font-size: 15px;
 }
-.container__menu__title__heart {
-  font-size: 25px;
+.container__menu__title .far.fa-heart {
+  position: absolute;
+  right: 15px;
+  font-size: 20px;
+  opacity: 0.8;
 }
-.container__menu__title__heart:hover {
-  background: linear-gradient(#FF79DA, #9356DC);
+.container__menu__title .far.fa-heart:hover {
+  opacity: 0;
+}
+.container__menu__title .fas.fa-heart {
+  font-size: 20px;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 0;
+  transition: all 2s ease-in-out;
+}
+.container__menu__title .fas.fa-heart:hover {
+  opacity: 1;
+  transform: scale(1.2);
 }
 .container__menu__cat {
   display: flex;
@@ -561,8 +576,6 @@ body hr main {
   align-content: center;
   gap: 20px;
   margin: 20px;
-  transition-duration: 3s;
-  transition-property: opacity 1;
 }
 .container__menu__cat h2 {
   padding: 0%;
@@ -586,6 +599,7 @@ body hr main {
   flex-direction: column;
   background-color: #FFF;
   gap: 5%;
+  border-radius: 10px;
 }
 .container__menu__cat__plat__name {
   font-weight: bold;
@@ -604,6 +618,23 @@ body hr main {
   line-height: 5px;
 }
 
+@media screen and (min-width: 470px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .header__img {
+    height: 300px;
+    width: 600px;
+  }
+
+  .container__menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 @media screen and (max-width: 470px) {
   .restaurant {
     background-color: #ecebeb;
@@ -703,6 +734,14 @@ body hr main {
     flex-direction: inherit;
     justify-content: space-around;
     align-items: center;
+  }
+
+  .container__menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 0px;
   }
 }
 
