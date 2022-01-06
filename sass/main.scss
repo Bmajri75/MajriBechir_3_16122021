@@ -8,50 +8,217 @@
 @import "./Utils/variables";
 @import "./Utils/mixins";
 
-// Import des Bases
-@import "./Base/base";
-
-// Import des Composent
-@import "./Components/bouton";
-@import "./Components/heart";
+// import des Component (les composent)
+@import "./Components/buttons";
 
 //  Import les LAYOUT
-@import "./Layout/header";
-@import "./Layout/presentation";
-@import "./Layout/nav";
 @import "./Layout/footer";
-// les pages anex des restautans
+
+// les pages annex des restautans
 @import "./Layout/_pageMenu";
 
 // mobil first
 @media screen and (max-width: 470px) {
-  .restaurant {
+  
+  body {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0 auto;
+    font-family: "Roboto", sans-serif;
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    hr {
+      background-color: $vert-clair;
+      border: none;
+      height: 1px;
+      width: 40px;
+      margin: -20px 0 0 0;
+      padding: 0%;
+      line-height: 5px;
+      main {
+        margin: 0px;
+      }
+    }
+
+    // Header dans le Body + pour la page de chaque restaurant
+    .header {
+      &__title {
+        font-family: "Shrikhand", cursive;
+        @include flex-center;
+      }
+
+      // header> Localisation uniquement pour la page d'acceuil
+
+      &__localisation-city {
+        background-color: $gris-fonce;
+        width: 100%;
+        height: 50px;
+        margin: 0;
+        @include flex-center;
+      }
+
+      // Pour le Header Des Page de chaque restaurants
+      &__back {
+        @include fontAwersom($noir);
+        position: absolute;
+        font-size: 20px;
+        top: 30px;
+        left: 30px;
+      }
+      // image pour le Header des pages de chaque restaurants
+      &__img {
+        @include header-img-size;
+      }
+    }
+  }
+
+  // container Call TO ACTION CONTAINER
+  .cta-container {
+    @include flex-column-center;
+    background-color: $gris-clair;
+    padding-bottom: 50px;
+
+    //Block CTA
+    .cta {
+      @include flex-column-center;
+
+      &__txt {
+        color: $gris-tres-fonce;
+      }
+
+      &__button {
+        @include btn;
+      }
+    }
+  }
+
+  //Section Fonctionnnement
+  .fonctionnement-container {
+    margin: 50px 20px;
+    // block fonctionnement
+    .fonctionnement {
+      // (Fonctionnement) Fontawersome de la section
+      &__li-font {
+        @include fontAwersom($gris-tres-fonce);
+      }
+
+      // (fonctionement) style des nombre a l'extreme gauche de chaque liste
+      &__nbr {
+        padding: 5px 10px;
+        margin: 5px;
+        background-color: $violet;
+        border-radius: 50px;
+        position: relative;
+        right: 37px;
+        color: $blamc;
+      }
+
+      //under liste
+      &__ul {
+        @include liste-style;
+      }
+
+      // liste details
+      &__li {
+        @include btn-nav;
+        border-radius: 10px;
+        // action au survol
+        &:hover {
+          cursor: pointer;
+          background-color: $violet-clair;
+          .fonctionnement__li-font {
+            color: $violet;
+          }
+        }
+      }
+    }
+  }
+  // fin du container Fonctionnement
+
+  // section restaurant
+  .restaurant-container {
     background-color: $gris-clair;
     padding: 50px 0px;
-
+  
+  // titre de la SECTION RESTAURANT
     &__title {
       margin-left: 20px;
     }
-
-    &__detail {
-      @include restaurant-patch;
-    }
-
-    &__nouveau {
-      @include btn-nouveau;
-    }
-
-    &__img {
-      width: 100%;
-      height: 200px;
-      border-radius: 20px 20px 0 0;
-    }
-    &__description {
-      padding: 0px 10px 15px 20px;
-      line-height: 5px;
+  
+  // DEBUT DEs CARTES
+    .restaurant {
+      &__card {
+        position: relative;
+        margin: 15px;
+        background-color: #FFF;
+        box-shadow: 0px 0px 25px 12px #ecebeb;
+        border-radius: 20px;
+        padding: 0px 0px 10px 0px;
+        line-height: 5px;
+  
+        // PATCHE NOUVEAU SUR IMAGE POSITION TOP RIGHT
+        &__nouveau {
+          position: absolute;
+          top: 0;
+          right: 10px;
+          color: green;
+          background-color: #87e487;
+          padding: 3% 3%;
+          font-size: 100%;
+          text-align: center;
+        }
+  
+      // IMAGE DES RESTAURANT DU PATCH
+        &__img {
+          width: 100%;
+          height: 200px;
+          border-radius: 20px 20px 0 0;
+        }
+  
+      // DEBUT DES COEUR 
+        .fas.fa-heart {
+          position: absolute;
+          right: 15px;
+          top: 220px;
+          font-size: 30px;
+          background-image: linear-gradient($rose-clair, $violet);
+          background-clip: text;
+          -webkit-background-clip: text;
+          color: transparent;
+          opacity: 0;
+          transition: all 2s ease-in-out;
+          &:hover {
+            opacity: 1;
+            transform: scale(1.2);
+          }
+        }
+        .far.fa-heart {
+          position: absolute;
+          right: 15px;
+          top: 220px;
+          right: 15px;
+          font-size: 30px;
+          opacity: 0.8;
+          &:hover {
+            opacity: 0;
+          }
+        }
+  
+        &__txt {
+         margin-left: 10px;
+        }
+      }
     }
   }
+  // Fin section restaurant 
 }
+
+
+  
+
 
 // version  desk et tablette
 @media screen and (min-width: 470px) {
@@ -82,7 +249,14 @@
     padding-top: 100px;
 
     &__nouveau {
-      @include btn-nouveau;
+      position: absolute;
+      top: 0;
+      right: 10px;
+      color: green;
+      background-color: #87e487;
+      padding: 1% 3%;
+      font-size: 100%;
+      text-align: center;
     }
     &__img {
       border-radius: 5% 5% 0 0;
@@ -90,11 +264,10 @@
       height: 60%;
     }
 
-    &__detail {
+    &li {
       display: flex;
       flex-direction: column;
       align-items: center;
-      @include restaurant-patch;
       height: 350px;
       width: 350px;
     }
@@ -114,12 +287,11 @@
       align-items: center;
     }
   }
-  .container__menu{
+  .container__menu {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
     margin: 0px;
-   
   }
 }

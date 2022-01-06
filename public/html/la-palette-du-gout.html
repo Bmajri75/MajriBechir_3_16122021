@@ -13,79 +13,90 @@
 
 <body>
     <header class="header">
-        <a href="../../index.html">
-            <p><i class="fas fa-arrow-left header__back"></i></p>
-        </a>
-        <h1 class="header__title">ohmyfood</h1>
-        <img class="header__img" src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-            alt="en fond de page un Plat vegetal food">
+        <!-- Top page Nom de la page plus Fleche de retour au menu -->
+        <div class="header__">
+            <a href="../../index.html">
+             <i class="fas fa-arrow-left header__back"></i>
+            </a>
+            <h1 class="header__title">ohmyfood</h1>
+            <img class="header__img" src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                alt="en fond de page un Plat vegetal food">
+        </div>
     </header>
 
     <main>
-        <div class="container__menu">
-            <div class=" container__menu__title">
+        <div class="container-menu">
+            <div class=" container-menu__title">
                 <h1>La palette du goût</h1>
-                <i class="far fa-heart container__menu__title__heart"></i>
+                <i class="far fa-heart"></i>
                 <i class="fas fa-heart"></i>
             </div>
-            <!--Les Entrees -->
-            <div class="container__menu__cat">
-                <h2>Entrées</h2>
-                <hr>
-                <div class="container__menu__cat__plat">
-                    <h3 class="container__menu__cat__plat__name">Filet de boeuf aux herbes</h3>
-                    <p>Accompagné de sa ribambelle de légumes<span class="container__menu__cat__plat__price">40€</span>
-                    </p>
-                </div>
-                <div class="container__menu__cat__plat">
-                    <h3 class="container__menu__cat__plat__name">Parmentier de queue de boeuf</h3>
-                    <p>À la truffe noire sur sa purée de panais<span
-                            class="container__menu__cat__plat__price">35€</span></p>
-                </div>
-                <div class="container__menu__cat__plat">
-                    <h3 class="container__menu__cat__plat__name">Filet de turbot</h3>
-                    <p>Aux agrumes<span class="container__menu__cat__plat__price"> 44€</span></p>
-                </div>
-            </div>
-            <!--Fin des entrees 
-            Les plats -->
-            <div class="container__menu__cat">
-                <h2>Plats</h2>
-                <hr>
-                <div class="container__menu__cat__plat">
-                    <h3 class="container__menu__cat__plat__name">Fricassée d'escargot</h3>
-                    <p>Au piment d'Espelette <span class="container__menu__cat__plat__price">25€</span></p>
-                </div>
-                <div class="container__menu__cat__plat">
-                    <h3 class="container__menu__cat__plat__name">Foie gras de canard mi-cuit</h3>
-                    <p>Et ses copeaux de truffe noire <span class="container__menu__cat__plat__price">35€</span></p>
-                </div>
-                <div class="container__menu__cat__plat">
-                    <h3 class="container__menu__cat__plat__name">Oeuf au plat</h3>
-                    <p>Assaisonné à la truffe sur lit de caviar <span class="container__menu__cat__plat__price">
-                            20€</span></p>
-                </div>
-            </div>
-            <!--La fin des Plats
-                Debut des Desserts  -->
-            <div class="container__menu__cat">
-                <h2>Desserts</h2>
-                <hr>
-                <div class="container__menu__cat__plat">
-                    <h3 class="container__menu__cat__plat__name">Paris-Brest</h3>
-                    <p>Revisité<span class="container__menu__cat__plat__price">18€</span>
-                    </p>
-                </div>
-                <div class="container__menu__cat__plat">
-                    <h3 class="container__menu__cat__plat__name">Macaron au chocolat d'exception </h3>
-                    <p>Et glace à la vanille de Madagascar<span class="container__menu__cat__plat__price">22€</span></p>
-                </div>
-                <div class="container__menu__cat__plat">
-                    <h3 class="container__menu__cat__plat__name">Mousse au chocolat</h3>
-                    <p>Au piment d'Espelette et à la truffe noire<span
-                            class="container__menu__cat__plat__price">23€</span></p>
-                </div>
-            </div>
+            
+                <!--  debut de la section du menu Hors titre -->
+            <section class="menu">
+                        <!--Les Entrees -->
+                    <div class="menu__cat">
+                        <h2>Entrées</h2>
+                        <hr>
+                        <div class="menu__cat__plat">
+                            <h3 class="menu__cat__plat__name">Filet de boeuf aux herbes</h3>
+                            <p>Accompagné de sa ribambelle de légumes<span class="menu__cat__plat__price">40€</span>
+                            </p>
+                        </div>
+                        <div class="menu__cat__plat">
+                            <h3 class="menu__cat__plat__name">Parmentier de queue de boeuf</h3>
+                            <p>À la truffe noire sur sa purée de panais<span
+                                    class="menu__cat__plat__price">35€</span></p>
+                        </div>
+                        <div class="menu__cat__plat">
+                            <h3 class="menu__cat__plat__name">Filet de turbot</h3>
+                            <p>Aux agrumes<span class="menu__cat__plat__price"> 44€</span></p>
+                        </div>
+                    </div>
+                    <!--Fin des entrees 
+
+                    Les plats -->
+                    <div class="menu__cat">
+                        <h2>Plats</h2>
+                        <hr>
+                        <div class="menu__cat__plat">
+                            <h3 class="menu__cat__plat__name">Fricassée d'escargot</h3>
+                            <p>Au piment d'Espelette <span class="menu__cat__plat__price">25€</span></p>
+                        </div>
+                        <div class="menu__cat__plat">
+                            <h3 class="menu__cat__plat__name">Foie gras de canard mi-cuit</h3>
+                            <p>Et ses copeaux de truffe noire <span class="menu__cat__plat__price">35€</span></p>
+                        </div>
+                        <div class="menu__cat__plat">
+                            <h3 class="menu__cat__plat__name">Oeuf au plat</h3>
+                            <p>Assaisonné à la truffe sur lit de caviar <span class="menu__cat__plat__price">20€</span></p>
+                        </div>
+                    </div>
+                    <!--La fin des Plats
+
+
+                    Debut des Desserts  -->
+                    <div class="menu__cat">
+                        <h2>Desserts</h2>
+                        <hr>
+                        <div class="menu__cat__plat">
+                            <h3 class="menu__cat__plat__name">Paris-Brest</h3>
+                            <p>Revisité<span class="menu__cat__plat__price">18€</span>
+                            </p>
+                        </div>
+                        <div class="menu__cat__plat">
+                            <h3 class="menu__cat__plat__name">Macaron au chocolat d'exception </h3>
+                            <p>Et glace à la vanille de Madagascar<span class="menu__cat__plat__price">22€</span></p>
+                        </div>
+                        <div class="menu__cat__plat">
+                            <h3 class="menu__cat__plat__name">Mousse au chocolat</h3>
+                            <p>Au piment d'Espelette et à la truffe noire<span class="menu__cat__plat__price">23€</span></p>
+                        </div>
+                    </div>
+                    <!-- Fin des desser  -->
+            </section>
+          
+            <!-- Bouton Pour commander  -->
             <button class="btn" type="button">
                 Commander
             </button>
