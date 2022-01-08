@@ -529,11 +529,41 @@ template {
   }
 }
 @media screen and (max-width: 470px) {
+  @keyframes loading-fin {
+    0% {
+      transform: translateY(0) scaleY(1) scaleX(1);
+      transform-origin: 50% 0%;
+      filter: blur(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-1000px) scaleY(2) scaleX(0.2);
+      transform-origin: 50% 0%;
+      filter: blur(40px);
+      opacity: 0;
+    }
+  }
   body {
     box-sizing: border-box;
     width: 100%;
     margin: 0 auto;
     font-family: "Roboto", sans-serif;
+  }
+  body .loader-anim {
+    display: grid;
+    place-items: center;
+    position: fixed;
+    height: 100vh;
+    inset: 0;
+    z-index: 1;
+    background-color: #fff;
+    opacity: 0.8;
+    animation: loading-fin 0.45s 3s cubic-bezier(0.755, 0.05, 0.855, 0.06) 1 forwards;
+  }
+  body .loader-anim i {
+    font-size: 100px;
+    font-weight: 900;
+    color: #9356DC;
   }
   body a {
     text-decoration: none;
@@ -668,7 +698,7 @@ template {
   .restaurant-container .restaurant__card {
     position: relative;
     margin: 15px;
-    background-color: #FFF;
+    background-color: #fff;
     box-shadow: 0px 0px 25px 12px #ecebeb;
     border-radius: 20px;
     padding: 0px 0px 10px 0px;
