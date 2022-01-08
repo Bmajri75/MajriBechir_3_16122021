@@ -2,7 +2,7 @@
 
 // style des Boutons CTA et chaque boutons principal 
   .btn {
-    @include btn; // appel a la mixin btn
+    @include btn; // appel de la mixin btn
     margin-left: auto;
     margin-right: auto;
     

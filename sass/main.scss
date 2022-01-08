@@ -1,330 +1,205 @@
-// import Vendors
-@import "./Base/_normalize";
-
 // Import et des font
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap");
+
+//Import Vendor
+@import "./Vendors/normalize";
+
+// import Bases
+@import "./Base/base";
 
 // import des autres Utils
 @import "./Utils/variables";
 @import "./Utils/mixins";
+@import "./Utils/animation";
 
 // import des Component (les composent)
 @import "./Components/buttons";
 
 //  Import les LAYOUT
 @import "./Layout/footer";
-
-// les pages annex des restautans
+@import "./Layout/_header";
 @import "./Layout/_pageMenu";
 
-// mobil first
-@media screen and (max-width: 470px) {
-  
-  @keyframes loading-fin {
-    0% {
-      transform: translateY(0) scaleY(1) scaleX(1);
-      transform-origin: 50% 0%;
-      filter: blur(0);
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(-1000px) scaleY(2) scaleX(0.2);
-      transform-origin: 50% 0%;
-      filter: blur(40px);
-      opacity: 0;
-    }
-  }
-  
+// container Call TO ACTION CONTAINER
+.cta-container {
+  @include flex-column-center;
+  background-color: $gris-clair;
+  padding-bottom: 50px;
 
-  body {
-
-    // Animation de chargement 
-    .loader-anim {
-      display: grid;
-      place-items: center;
-      position: fixed;
-      height: 100vh;
-      inset: 0;
-      z-index: 1;
-      background-color: #fff;
-     opacity: 0.8;
-     animation: loading-fin 0.45s 3s cubic-bezier(0.755, 0.050, 0.855, 0.060) 1 forwards;
-      
-    //  le Font awersome pour l'animation de debut 
-      i {
-        font-size: 100px;
-        font-weight: 900;
-        color: $violet;
-      }
-    }
-
-    box-sizing: border-box;
-    width: 100%;
-    margin: 0 auto;
-    font-family: "Roboto", sans-serif;
-    a {
-      text-decoration: none;
-      color: black;
-    }
-
-    // petit trait en dessous des nom de categorie 
-    hr {
-      background-color: $vert-clair;
-      border: none;
-      height: 1px;
-      width: 40px;
-      margin: -20px 0 0 0;
-      padding: 0%;
-      line-height: 5px;
-      main {
-        margin: 0px;
-      }
-    }
-
-    // Header dans le Body + pour la page de chaque restaurant
-    .header {
-      &__title {
-        font-family: "Shrikhand", cursive;
-        @include flex-center;
-      }
-
-      // header> Localisation uniquement pour la page d'acceuil
-      &__localisation-city {
-        background-color: $gris-fonce;
-        width: 100%;
-        height: 50px;
-        margin: 0;
-        @include flex-center;
-      }
-
-      // Pour le Header Des Page de chaque restaurants
-      &__back {
-        @include fontAwersom($noir);
-        position: absolute;
-        font-size: 20px;
-        top: 30px;
-        left: 30px;
-      }
-      // image pour le Header des pages de chaque restaurants
-      &__img {
-        @include header-img-size;
-      }
-    }
-  }
-
-  // container Call TO ACTION CONTAINER
-  .cta-container {
+  //Block CTA
+  .cta {
     @include flex-column-center;
-    background-color: $gris-clair;
-    padding-bottom: 50px;
 
-    //Block CTA
-    .cta {
-      @include flex-column-center;
+    &__txt {
+      color: $gris-tres-fonce;
+    }
+
+    &__button {
+      @include btn;
+    }
+  }
+}
+
+//Section Fonctionnnement
+.fonctionnement-container {
+  margin: 50px 20px;
+  // block fonctionnement
+
+  .fonctionnement {
+    // (Fonctionnement) Fontawersome de la section
+    &__li-font {
+      @include fontAwersom($gris-tres-fonce);
+    }
+
+    // (fonctionement) style des nombre a l'extreme gauche de chaque liste
+    &__nbr {
+      padding: 5px 10px;
+      margin: 5px;
+      background-color: $violet;
+      border-radius: 50px;
+      position: relative;
+      right: 37px;
+      color: $blamc;
+    }
+
+    //under liste
+    &__ul {
+      @include liste-style;
+    }
+
+    // liste details
+    &__li {
+      @include btn-nav;
+      border-radius: 10px;
+      // action au survol
+      &:hover {
+        cursor: pointer;
+        background-color: $violet-clair;
+        .fonctionnement__li-font {
+          color: $violet;
+        }
+      }
+    }
+  }
+}
+// fin du container Fonctionnement
+
+// section restaurant
+.restaurant-container {
+  background-color: $gris-clair;
+  padding: 50px 0px;
+
+  // titre de la SECTION RESTAURANT
+  &__title {
+    margin-left: 20px;
+  }
+
+  // DEBUT DEs CARTES
+  .restaurant {
+    &__card {
+      position: relative;
+      margin: 15px;
+      background-color: #fff;
+      box-shadow: 0px 0px 25px 12px #ecebeb;
+      border-radius: 20px;
+      padding: 0px 0px 10px 0px;
+      line-height: 5px;
+
+      // PATCHE NOUVEAU SUR IMAGE POSITION TOP RIGHT
+      &__nouveau {
+        position: absolute;
+        top: 0;
+        right: 10px;
+        color: green;
+        background-color: #87e487;
+        padding: 3% 3%;
+        font-size: 100%;
+        text-align: center;
+      }
+
+      // IMAGE DES RESTAURANT DU PATCH
+      &__img {
+        object-fit: cover;
+        width: 100%;
+        height: 200px;
+        border-radius: 20px 20px 0 0;
+      }
+
+      // DEBUT DES COEUR
+      .fas.fa-heart {
+        position: absolute;
+        right: 15px;
+        top: 220px;
+        font-size: 30px;
+        background-image: linear-gradient($rose-clair, $violet);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        opacity: 0;
+        transition: all 2s ease-in-out;
+        &:hover {
+          opacity: 1;
+          transform: scale(1.2);
+        }
+      }
+      .far.fa-heart {
+        position: absolute;
+        right: 15px;
+        top: 220px;
+        right: 15px;
+        font-size: 30px;
+        opacity: 0.8;
+        &:hover {
+          opacity: 0;
+        }
+      }
 
       &__txt {
-        color: $gris-tres-fonce;
-      }
-
-      &__button {
-        @include btn;
+        margin-left: 10px;
       }
     }
   }
-
-  //Section Fonctionnnement
-  .fonctionnement-container {
-    margin: 50px 20px;
-    // block fonctionnement
-    .fonctionnement {
-      // (Fonctionnement) Fontawersome de la section
-      &__li-font {
-        @include fontAwersom($gris-tres-fonce);
-      }
-
-      // (fonctionement) style des nombre a l'extreme gauche de chaque liste
-      &__nbr {
-        padding: 5px 10px;
-        margin: 5px;
-        background-color: $violet;
-        border-radius: 50px;
-        position: relative;
-        right: 37px;
-        color: $blamc;
-      }
-
-      //under liste
-      &__ul {
-        @include liste-style;
-      }
-
-      // liste details
-      &__li {
-        @include btn-nav;
-        border-radius: 10px;
-        // action au survol
-        &:hover {
-          cursor: pointer;
-          background-color: $violet-clair;
-          .fonctionnement__li-font {
-            color: $violet;
-          }
-        }
-      }
-    }
-  }
-  // fin du container Fonctionnement
-
-  // section restaurant
-  .restaurant-container {
-    background-color: $gris-clair;
-    padding: 50px 0px;
-
-    // titre de la SECTION RESTAURANT
-    &__title {
-      margin-left: 20px;
-    }
-
-    // DEBUT DEs CARTES
-    .restaurant {
-      &__card {
-        position: relative;
-        margin: 15px;
-        background-color: #fff;
-        box-shadow: 0px 0px 25px 12px #ecebeb;
-        border-radius: 20px;
-        padding: 0px 0px 10px 0px;
-        line-height: 5px;
-
-        // PATCHE NOUVEAU SUR IMAGE POSITION TOP RIGHT
-        &__nouveau {
-          position: absolute;
-          top: 0;
-          right: 10px;
-          color: green;
-          background-color: #87e487;
-          padding: 3% 3%;
-          font-size: 100%;
-          text-align: center;
-        }
-
-        // IMAGE DES RESTAURANT DU PATCH
-        &__img {
-          width: 100%;
-          height: 200px;
-          border-radius: 20px 20px 0 0;
-        }
-
-        // DEBUT DES COEUR
-        .fas.fa-heart {
-          position: absolute;
-          right: 15px;
-          top: 220px;
-          font-size: 30px;
-          background-image: linear-gradient($rose-clair, $violet);
-          background-clip: text;
-          -webkit-background-clip: text;
-          color: transparent;
-          opacity: 0;
-          transition: all 2s ease-in-out;
-          &:hover {
-            opacity: 1;
-            transform: scale(1.2);
-          }
-        }
-        .far.fa-heart {
-          position: absolute;
-          right: 15px;
-          top: 220px;
-          right: 15px;
-          font-size: 30px;
-          opacity: 0.8;
-          &:hover {
-            opacity: 0;
-          }
-        }
-
-        &__txt {
-          margin-left: 10px;
-        }
-      }
-    }
-  }
-  // Fin section restaurant
 }
+// Fin section restaurant
 
 // version  desk et tablette
 @media screen and (min-width: 470px) {
-  .nav {
+  main {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
-    margin: 10px;
-    &__title {
-      display: none;
+    flex-direction: column;
+
+    .fonctionnement-container {
+      margin: 0;
+      padding: 0;
+
+      .fonctionnement {
+        &__title {
+          text-align: center;
+        }
+
+        &__ul {
+          display: flex;
+          justify-content: space-evenly;
+          margin: 0;
+          padding: 0;
+        }
+      }
     }
 
-    &__order-list {
-      display: flex;
-      flex-wrap: wrap;
-      width: 100%;
-      justify-content: space-evenly;
+    .restaurant-container{
+      &__title{
+        text-align: center;
+      }
+      .restaurant{
+        display: flex;  
+        flex-wrap: wrap;
+        gap: 50px;  
+        justify-content: center;
+        
+        &__card{
+          width: 500px;
+        }
+       }
     }
-  }
-
-  .restaurant {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    background-color: $gris-clair;
-    padding-top: 100px;
-
-    &__nouveau {
-      position: absolute;
-      top: 0;
-      right: 10px;
-      color: green;
-      background-color: #87e487;
-      padding: 1% 3%;
-      font-size: 100%;
-      text-align: center;
-    }
-    &__img {
-      border-radius: 5% 5% 0 0;
-      width: 100%;
-      height: 60%;
-    }
-
-    &li {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      height: 350px;
-      width: 350px;
-    }
-
-    &__title {
-      position: absolute;
-      top: 600px;
-    }
-  }
-
-  .footer {
-    &__liste {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: inherit;
-      justify-content: space-around;
-      align-items: center;
-    }
-  }
-  .container__menu {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    margin: 0px;
   }
 }

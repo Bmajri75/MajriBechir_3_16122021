@@ -1,0 +1,31 @@
+// le header de la page index ainsi que celui de toutes les autre pages 
+
+.header {
+    &__title {
+      font-family: "Shrikhand", cursive;
+      @include flex-center;
+    }
+
+    // header> Localisation uniquement pour la page d'acceuil
+    &__localisation-city {
+      background-color: $gris-fonce;
+      width: 100%;
+      height: 50px;
+      margin: 0;
+      @include flex-center;
+    }
+
+    // Fleche de retour en arriere Pour le Header Des Page de chaque restaurants
+    &__back {
+      @include fontAwersom($noir);
+      position: absolute;
+      font-size: 20px;
+      top: 30px;
+      left: 30px;
+    }
+    
+    // image pour le Header des pages de chaque restaurants
+    &__img {
+      @include header-img-size;
+    }
+  }
