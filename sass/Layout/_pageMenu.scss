@@ -1,9 +1,11 @@
 @keyframes slide-left {
   0% {
-    transform: translateX(0);
+    margin-right: -5rem;
+
   }
   100% {
-    transform: translateX(-70px);
+    margin-right: 0rem;
+
   }
 }
 
@@ -70,7 +72,7 @@
       border-radius: 20px;
       overflow: hidden;
       &:hover {
-        .slide, .menu__cat__plat__price {
+        .slide {
           animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
           
         }
@@ -112,21 +114,20 @@
         color: $gris-tres-fonce;
         text-transform: uppercase;
       }
-      &__partie {
-        display: flex;
-        flex-direction: column;
-        align-items: baseline;
-        margin-left: 5%;
-      }
-
       // le Block du plat
       &__plat {
         padding: 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
         
 
         // le nom dans le block
         &__name {
-          margin: 4px 0px 10px 0px;
+          margin:0px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
         }
 
         // le prix du block
@@ -141,10 +142,10 @@
         p {
           overflow: hidden;
           text-overflow: ellipsis;
-          display: flex;
-          justify-content: space-between;
+          white-space: nowrap;
+          display: block;
           color: $gris-tres-fonce;
-          margin: 0 0 5px 0px;
+          margin: 0px;
         }
       }
     }

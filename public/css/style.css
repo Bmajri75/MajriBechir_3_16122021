@@ -385,10 +385,10 @@ template {
 
 @keyframes slide-left {
   0% {
-    transform: translateX(0);
+    margin-right: -5rem;
   }
   100% {
-    transform: translateX(-70px);
+    margin-right: 0rem;
   }
 }
 @keyframes rotation-chek {
@@ -448,7 +448,7 @@ template {
   border-radius: 20px;
   overflow: hidden;
 }
-.container-menu .menu .menu-item:hover .slide, .container-menu .menu .menu-item:hover .menu__cat__plat__price {
+.container-menu .menu .menu-item:hover .slide {
   animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 .container-menu .menu .menu-item:hover i {
@@ -484,17 +484,17 @@ template {
   color: #858383;
   text-transform: uppercase;
 }
-.container-menu .menu__cat__partie {
-  display: flex;
-  flex-direction: column;
-  align-items: baseline;
-  margin-left: 5%;
-}
 .container-menu .menu__cat__plat {
   padding: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .container-menu .menu__cat__plat__name {
-  margin: 4px 0px 10px 0px;
+  margin: 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .container-menu .menu__cat__plat__price {
   margin: auto 0px 0px auto;
@@ -505,10 +505,10 @@ template {
 .container-menu .menu__cat__plat p {
   overflow: hidden;
   text-overflow: ellipsis;
-  display: flex;
-  justify-content: space-between;
+  white-space: nowrap;
+  display: block;
   color: #858383;
-  margin: 0 0 5px 0px;
+  margin: 0px;
 }
 
 @media screen and (min-width: 470px) {
