@@ -1,40 +1,49 @@
 @import "../Utils/variables";
 // Les bases du porjet
 
-body{
-    // dans tout le body 
-    box-sizing: border-box;
-    width: 100%;
-    margin: 0 auto;
-    font-family: "Roboto", sans-serif;
-    
-    // les main aurons aucuns margin
-    main {
-        margin: 0px;
-      }
+body {
+  // dans tout le body
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 auto;
+  font-family: "Roboto", sans-serif;
 
-    // tout les a du projet
-    a {
-        text-decoration: none;
-        color: black;
-      }
+  // les main aurons aucuns margin
+  main {
+    // version  desk et tablette
+    @media screen and (min-width: 470px) {
+      display: flex;
+      flex-direction: column;
+    }
+    margin: 0px;
+  }
 
-       //animation de chargement de page 
-    .loader-anim {
-        display: grid;
-        place-items: center;
-        position: fixed;
-        height: 100vh;
-        inset: 0;
-        z-index: 1;
-        background-color: #fff;
-       opacity: 0.8;
-       animation: loading-fin 0.45s 3s cubic-bezier(0.755, 0.050, 0.855, 0.060) 1 forwards;
-      //  le Font awersome pour l'animation de debut 
-        i {
-          font-size: 100px;
-          font-weight: 900;
-          color: $violet;
-        }
-      }
+  // tout les a du projet
+  a {
+    text-decoration: none;
+    color: black;
+    :hover {
+      cursor: pointer;
+    }
+  }
+
+  //animation de chargement de page
+  .loader-anim {
+    display: grid;
+    place-items: center;
+    position: fixed;
+    height: 100vh;
+    inset: 0;
+    z-index: 1;
+    background-color: #fff;
+    opacity: 0.8;
+    animation: loading-fin 0.45s 3s cubic-bezier(0.755, 0.05, 0.855, 0.06) 1
+      forwards;
+    //  le Font awersome pour l'animation de debut
+    i {
+      font-size: 100px;
+      font-weight: 900;
+      color: $violet;
+    }
+  }
 }

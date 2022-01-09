@@ -2,7 +2,6 @@
 .container-menu {
   display: flex;
   flex-direction: column;
-
   background-color: #fff;
   border-radius: 25px 25px 0 0;
   position: relative;
@@ -46,7 +45,7 @@
       @media screen and (min-width: 470px) {
         right: -20%;
         top: 35%;
-                font-size: 30px;
+        font-size: 30px;
       }
       opacity: 0;
       transition: all 2s ease-in-out;

@@ -1,0 +1,19 @@
+// container Call TO ACTION CONTAINER
+.cta-container {
+  @include flex-column-center;
+  background-color: $gris-clair;
+  padding-bottom: 50px;
+
+  //Block CTA
+  .cta {
+    @include flex-column-center;
+
+    &__txt {
+      color: $gris-tres-fonce;
+    }
+
+    &__button {
+      @include btn;
+    }
+  }
+}

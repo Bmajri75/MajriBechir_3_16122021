@@ -1,0 +1,60 @@
+//Section Fonctionnnement
+.fonctionnement-container {
+  margin: 50px 20px;
+  // block fonctionnement
+  @media screen and (min-width: 470px) {
+    margin: 0;
+    padding: 0;
+  }
+
+  .fonctionnement {
+    // Desk et Tablettes
+    @media screen and (min-width: 470px) {
+      &__title {
+        text-align: center;
+      }
+    }
+
+    // (Fonctionnement) Fontawersome de la section
+    &__li-font {
+      @include fontAwersom($gris-tres-fonce);
+    }
+
+    // (fonctionement) style des nombre a l'extreme gauche de chaque liste
+    &__nbr {
+      padding: 5px 10px;
+      margin: 5px;
+      background-color: $violet;
+      border-radius: 50px;
+      position: relative;
+      right: 37px;
+      color: $blamc;
+    }
+
+    //under liste
+    &__ul {
+      @media screen and (min-width: 470px) {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0;
+        padding: 0;
+      }
+      @include liste-style;
+    }
+
+    // liste details
+    &__li {
+      @include btn-nav;
+      border-radius: 10px;
+      // action au survol
+      &:hover {
+        cursor: pointer;
+        background-color: $violet-clair;
+        .fonctionnement__li-font {
+          color: $violet;
+        }
+      }
+    }
+  }
+}
+// fin du container Fonctionnement

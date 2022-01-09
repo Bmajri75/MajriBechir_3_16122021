@@ -346,9 +346,18 @@ body {
 body main {
   margin: 0px;
 }
+@media screen and (min-width: 470px) {
+  body main {
+    display: flex;
+    flex-direction: column;
+  }
+}
 body a {
   text-decoration: none;
   color: black;
+}
+body a :hover {
+  cursor: pointer;
 }
 body .loader-anim {
   display: grid;
@@ -364,7 +373,7 @@ body .loader-anim {
 body .loader-anim i {
   font-size: 100px;
   font-weight: 900;
-  color: #9356DC;
+  color: #9356dc;
 }
 
 @keyframes loading-fin {
@@ -398,8 +407,8 @@ body .loader-anim i {
   }
 }
 .btn {
-  background: linear-gradient(#FF79DA, #9356DC);
-  color: #FFF;
+  background: linear-gradient(#ff79da, #9356dc);
+  color: #fff;
   height: 50px;
   width: 220px;
   border-radius: 50px;
@@ -420,7 +429,7 @@ body .loader-anim i {
 .footer {
   padding-bottom: 30px;
   background-color: #2b2b2b;
-  color: #FFF;
+  color: #fff;
 }
 .footer__title {
   font-family: "Shrikhand", cursive;
@@ -440,7 +449,7 @@ body .loader-anim i {
   padding: 5px;
 }
 .footer li a {
-  color: #FFF;
+  color: #fff;
 }
 
 .header__title {
@@ -512,7 +521,7 @@ body .loader-anim i {
 }
 .container-menu__title .fas.fa-heart {
   font-size: 20px;
-  background-image: linear-gradient(#FF79DA, #9356DC);
+  background-image: linear-gradient(#ff79da, #9356dc);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -545,7 +554,7 @@ body .loader-anim i {
   display: flex;
   box-shadow: 5px 5px 27px 10px #cac8c8;
   font-size: 12px;
-  background-color: #FFF;
+  background-color: #fff;
   border-radius: 20px;
   overflow: hidden;
 }
@@ -591,7 +600,7 @@ body .loader-anim i {
   text-transform: uppercase;
 }
 .container-menu .menu__cat hr {
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   border: none;
   height: 1px;
   width: 40px;
@@ -656,8 +665,8 @@ body .loader-anim i {
   color: #858383;
 }
 .cta-container .cta__button {
-  background: linear-gradient(#FF79DA, #9356DC);
-  color: #FFF;
+  background: linear-gradient(#ff79da, #9356dc);
+  color: #fff;
   height: 50px;
   width: 220px;
   border-radius: 50px;
@@ -676,6 +685,17 @@ body .loader-anim i {
 .fonctionnement-container {
   margin: 50px 20px;
 }
+@media screen and (min-width: 470px) {
+  .fonctionnement-container {
+    margin: 0;
+    padding: 0;
+  }
+}
+@media screen and (min-width: 470px) {
+  .fonctionnement-container .fonctionnement__title {
+    text-align: center;
+  }
+}
 .fonctionnement-container .fonctionnement__li-font {
   padding: 0px 20px 0 0;
   font-size: 15px;
@@ -684,15 +704,23 @@ body .loader-anim i {
 .fonctionnement-container .fonctionnement__nbr {
   padding: 5px 10px;
   margin: 5px;
-  background-color: #9356DC;
+  background-color: #9356dc;
   border-radius: 50px;
   position: relative;
   right: 37px;
-  color: #FFF;
+  color: #fff;
 }
 .fonctionnement-container .fonctionnement__ul {
   list-style: none;
   padding: 0px;
+}
+@media screen and (min-width: 470px) {
+  .fonctionnement-container .fonctionnement__ul {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+  }
 }
 .fonctionnement-container .fonctionnement__li {
   border: none;
@@ -713,7 +741,7 @@ body .loader-anim i {
   background-color: #cdb8e6;
 }
 .fonctionnement-container .fonctionnement__li:hover .fonctionnement__li-font {
-  color: #9356DC;
+  color: #9356dc;
 }
 
 .restaurant-container {
@@ -723,6 +751,19 @@ body .loader-anim i {
 .restaurant-container__title {
   margin-left: 20px;
 }
+@media screen and (min-width: 470px) {
+  .restaurant-container__title {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 470px) {
+  .restaurant-container .restaurant {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+  }
+}
 .restaurant-container .restaurant__card {
   position: relative;
   margin: 15px;
@@ -731,6 +772,11 @@ body .loader-anim i {
   border-radius: 20px;
   padding: 0px 0px 10px 0px;
   line-height: 5px;
+}
+@media screen and (min-width: 470px) {
+  .restaurant-container .restaurant__card {
+    width: 500px;
+  }
 }
 .restaurant-container .restaurant__card__nouveau {
   position: absolute;
@@ -753,7 +799,7 @@ body .loader-anim i {
   right: 15px;
   top: 220px;
   font-size: 30px;
-  background-image: linear-gradient(#FF79DA, #9356DC);
+  background-image: linear-gradient(#ff79da, #9356dc);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -777,38 +823,6 @@ body .loader-anim i {
 }
 .restaurant-container .restaurant__card__txt {
   margin-left: 10px;
-}
-
-@media screen and (min-width: 470px) {
-  main {
-    display: flex;
-    flex-direction: column;
-  }
-  main .fonctionnement-container {
-    margin: 0;
-    padding: 0;
-  }
-  main .fonctionnement-container .fonctionnement__title {
-    text-align: center;
-  }
-  main .fonctionnement-container .fonctionnement__ul {
-    display: flex;
-    justify-content: space-evenly;
-    margin: 0;
-    padding: 0;
-  }
-  main .restaurant-container__title {
-    text-align: center;
-  }
-  main .restaurant-container .restaurant {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
-    justify-content: center;
-  }
-  main .restaurant-container .restaurant__card {
-    width: 500px;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */
