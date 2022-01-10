@@ -16,7 +16,7 @@ restaurants car leur menu est préparé à l’avance. Plus de perte de temps à
 
 ## RENDU 
 
-![Rendu de l'app](Accueil.png)
+![Rendu de l'app](./public/images/Accueil.png)
 
 
 
