@@ -339,8 +339,7 @@ template {
 
 body {
   box-sizing: border-box;
-  width: 100%;
-  margin: 0 auto;
+  margin: 0;
   font-family: "Roboto", sans-serif;
 }
 body main {
@@ -363,9 +362,11 @@ body .loader-anim {
   display: grid;
   place-items: center;
   position: fixed;
-  height: 100vh;
-  inset: 0;
-  z-index: 1;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
   background-color: #fff;
   opacity: 0.8;
   animation: loading-fin 0.45s 3s cubic-bezier(0.755, 0.05, 0.855, 0.06) 1 forwards;
@@ -380,13 +381,11 @@ body .loader-anim i {
   0% {
     transform: translateY(0) scaleY(1) scaleX(1);
     transform-origin: 50% 0%;
-    filter: blur(0);
     opacity: 1;
   }
   100% {
     transform: translateY(-1000px) scaleY(2) scaleX(0.2);
     transform-origin: 50% 0%;
-    filter: blur(40px);
     opacity: 0;
   }
 }
@@ -539,7 +538,7 @@ body .loader-anim i {
   top: 40%;
   right: 5%;
   opacity: 0;
-  transition: all 2s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 @media screen and (min-width: 470px) {
   .container-menu__title .fas.fa-heart {

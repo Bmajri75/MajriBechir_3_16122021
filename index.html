@@ -35,11 +35,11 @@
     <title>ohMyFood</title>
   </head>
 
+  <!-- Debut du Body  -->
   <body>
     <div class="loader-anim">
       <i class="fas fa-utensils fa-spin"></i>
     </div>
-
     <header class="header">
       <h1 class="header__title">ohmyfood</h1>
       <p class="header__localisation-city">
@@ -97,8 +97,8 @@
         <!-- debut des carte  -->
         <div class="restaurant">
           <!-- CARD-1  -->
-          <div class="restaurant__card">
-            <a href="./public/html/la-palette-du-gout.html">
+          <a href="./public/html/la-palette-du-gout.html">
+            <div class="restaurant__card">
               <!-- debut du lien clikable  -->
               <p class="restaurant__card__nouveau">Nouveau</p>
               <img
@@ -114,14 +114,14 @@
                 <i class="far fa-heart"></i>
                 <i class="fas fa-heart"></i>
               </div>
-            </a>
+            </div>
             <!-- Fin du lien clikable  -->
-          </div>
+          </a>
           <!-- FIN CARD-1 -->
 
           <!-- CARD-2 -->
-          <div class="restaurant__card">
-            <a href="./public/html/la-note-enchantee.html">
+          <a href="./public/html/la-note-enchantee.html">
+            <div class="restaurant__card">
               <p class="restaurant__card__nouveau">Nouveau</p>
               <img
                 class="restaurant__card__img"
@@ -136,14 +136,14 @@
                 <i class="far fa-heart"></i>
                 <i class="fas fa-heart"></i>
               </div>
-            </a>
+            </div>
             <!-- Fin du lien clikable  -->
-          </div>
+          </a>
           <!-- FIN CARD-2 -->
 
           <!-- CARD-3 -->
-          <div class="restaurant__card">
-            <a href="./public/html/a-la-francaise.html">
+          <a href="./public/html/a-la-francaise.html">
+            <div class="restaurant__card">
               <img
                 class="restaurant__card__img"
                 src="./public/images/restaurants//toa-heftiba-DQKerTsQwi0-unsplash.jpg"
@@ -156,18 +156,20 @@
                 <!-- les coeur pour la partie restaurant -->
                 <i class="far fa-heart"></i>
                 <i class="fas fa-heart"></i>
-              </div> </a>
+              </div>
               <!-- Fin du lien clikable  -->
-          </div>
+            </div>
+          </a>
           <!-- FIN CARD-3 -->
 
           <!-- CARTE-4 -->
-          <div class="restaurant__card">
-            <a href="./public/html/le-delice-des-sens.html">
+          <a href="./public/html/le-delice-des-sens.html">
+            <div class="restaurant__card">
               <img
                 class="restaurant__card__img"
                 src="./public/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
-                alt="Assiette de Legumes"/>
+                alt="Assiette de Legumes"
+              />
 
               <!-- Texte de la card  -->
               <div class="restaurant__card__txt">
@@ -177,24 +179,32 @@
                 <i class="far fa-heart"></i>
                 <i class="fas fa-heart"></i>
               </div>
-            </a>
+            </div>
             <!-- Fin du lien clikable  -->
-          </div>
+          </a>
         </div>
         <!-- Div restaurant  -->
       </section>
       <!-- Fin de la Section Restaurant -->
     </main>
     <footer>
-        <div class="footer">
-          <h1 class="footer__title">ohMyFood</h1>
-          <ul class="footer__liste">
-            <li> <a href="#"><i class="fas fa-utensils"></i> Proposer un restaurant</a></li>
-            <li> <a href="#"><i class="fas fa-hands-helping"></i>Devenir Partenaire</a></li>
-            <li> <a href="#"> Mention légales</a></li>
-            <li><a href="mailto:contact@ohmyfood.com">Contact</a></li>
-          </ul>
-        </div>
-      </footer>
+      <div class="footer">
+        <h1 class="footer__title">ohMyFood</h1>
+        <ul class="footer__liste">
+          <li>
+            <a href="#"
+              ><i class="fas fa-utensils"></i> Proposer un restaurant</a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fas fa-hands-helping"></i>Devenir Partenaire</a
+            >
+          </li>
+          <li><a href="#"> Mention légales</a></li>
+          <li><a href="mailto:contact@ohmyfood.com">Contact</a></li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>
