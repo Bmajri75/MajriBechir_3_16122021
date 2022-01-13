@@ -14,6 +14,7 @@ body {
       display: flex;
       flex-direction: column;
     }
+    
     margin: 0px;
   }
 
@@ -27,24 +28,35 @@ body {
   }
 
   //animation de chargement de page
-  .loader-anim {
-    display: grid;
+   .loader-anim {
+     display: grid;
     place-items: center;
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    background-color: #fff;
-    opacity: 0.8;
-    animation: loading-fin 0.45s 3s cubic-bezier(0.755, 0.05, 0.855, 0.06) 1
-      forwards;
-    //  le Font awersome pour l'animation de debut
-    i {
-      font-size: 100px;
-      font-weight: 900;
-      color: $violet;
-    }
-  }
+     position: fixed;
+     height: 100%;
+     width: 100%;
+     top: 0;
+     left: 0;
+     z-index: 100;
+     background-color: #fff;
+     opacity: 0.8;
+     animation:  loading-fin 0.45s 6s cubic-bezier(0.755, 0.05, 0.855, 0.06) 1
+       forwards;
+
+     //  texte pour l'animation de debut
+     &__txt {
+      animation: rotate-txt 5s cubic-bezier(.24,1.64,.77,.29) infinite reverse both running ;
+      font-family: "Shrikhand", cursive;
+     border: 6px solid $noir;
+       padding: 50px 60px;
+       border-radius: 50%;
+        font-size: 30px;
+       font-weight: 900;
+       color: $noir;
+       margin: 0;
+// adaptation pour ecrant large
+       @media screen and (min-width: 470px){
+        font-size: 60px;
+       }
+     }
+   }
 }

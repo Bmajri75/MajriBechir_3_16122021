@@ -1,4 +1,19 @@
 // Page des menu de restaurants
+@media screen and (min-width: 470px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+// IMage du plats qui represente le resteau
+    &__img {
+      height: 40vh;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+// CONTAINER PAGE
 .container-menu {
   display: flex;
   flex-direction: column;
@@ -7,184 +22,181 @@
   position: relative;
   top: -30px;
 
+  // TITLE PAGE
   &__title {
     @media screen and (min-width: 470px) {
       margin: auto;
     }
+
     font-family: "Shrikhand", cursive;
     display: flex;
     align-items: center;
     position: relative;
     margin: 0 15px;
     font-size: 16px;
-    .far.fa-heart {
-      @media screen and (min-width: 470px) {
-        top: 30px;
-        right: -20%;
-        font-size: 30px;
-      }
-      position: absolute;
-      top: 40%;
-      right: 5%;
-      font-size: 20px;
-      opacity: 0.8;
-      &:hover {
-        opacity: 0;
-      }
-    }
 
-    .fas.fa-heart {
-      font-size: 20px;
-      background-image: linear-gradient($rose-clair, $violet);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      position: absolute;
-      top: 40%;
-      right: 5%;
-      @media screen and (min-width: 470px) {
-        right: -20%;
-        top: 35%;
-        font-size: 30px;
-      }
-      opacity: 0;
-      transition: all 1s ease-in-out;
-      &:hover {
-        opacity: 1;
-        transform: scale(1.2);
-      }
-    }
-  }
-
-  //  CONTAINER MENU
-  .menu {
-    display: flex;
-    @media screen and (max-width: 470px) {
-      flex-direction: column;
-    }
-
-    // les differentes categories
-    &__cat {
-      @media screen and (min-width: 470px) {
-        width: 30%;
-      }
-  
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      margin: 20px;
-
-      // Entrees, Plats, Desserts
-      h2 {
-        padding: 0%;
-        margin-bottom: 5px;
-        font-weight: 100;
-        font-size: 13px;
-        color: $gris-tres-fonce;
-        text-transform: uppercase;
-      }
-
-      // petit trait en dessous des nom de categorie
-      hr {
-        background-color: $vert-clair;
-        border: none;
-        height: 1px;
-        width: 40px;
-        margin: -20px 0 0 0;
-        padding: 0%;
-        line-height: 5px;
-      }
-     
-
-      .menu-item {  
-        @for $i from 0 to 4 {
-          &:nth-child(#{$i}) {
-            animation-delay: 500ms * $i;
-          }
+      .far.fa-heart {
+        @media screen and (min-width: 470px) {
+          top: 30px;
+          right: -20%;
+          font-size: 30px;
         }
 
-        animation: progressiv-opacity 1s;
-      animation-fill-mode: both;
-        display: flex;
-        box-shadow: 5px 5px 27px 10px $gris-fonce;
-        font-size: 12px;
-        background-color: $blamc;
-        border-radius: 20px;
-        overflow: hidden;
+        position: absolute;
+        top: 40%;
+        right: 5%;
+        font-size: 20px;
+        opacity: 0.8;
         &:hover {
-          .slide {
-            animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-          }
-          i {
-            animation-name: rotation-chek;
-            animation-duration: 0.5s;
-            animation-timing-function: ease-in-out;
-            animation-delay: 0s;
-            animation-iteration-count: 1;
-          }
+          opacity: 0;
         }
       }
 
-      .slide {
-        margin-right: -5rem;
-        background-color: #99e2d0;
-        width: 5rem;
+      .fas.fa-heart {
+        font-size: 20px;
+        background-image: linear-gradient($rose-clair, $violet);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        position: absolute;
+        top: 40%;
+        right: 5%;
+
+        @media screen and (min-width: 470px) {
+          right: -20%;
+          top: 35%;
+          font-size: 30px;
+        }
+
+        opacity: 0;
+        transition: all 1s ease-in-out;
+        &:hover {
+          opacity: 1;
+          transform: scale(1.2);
+        }
+      }
+    }
+
+  
+    .menu {
+      display: flex;
+      @media screen and (max-width: 470px) {
+        flex-direction: column;
+      }
+
+      // les differentes categories ENTREES PLATS DESSERT
+      &__cat {
+        @media screen and (min-width: 470px) {
+          width: 30%;
+        }
+    
         display: flex;
-        align-items: center;
-        i {
-          margin: auto;
-          color: white;
-          font-size: 25px;
-        }
-      }
+        flex-direction: column;
+        gap: 20px;
+        margin: 20px;
 
-      // le Block du plat
-      &__plat {
-        padding: 10px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-
-        // le nom de chaque plat dans le block
-        &__name {
-          margin: 0px;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          white-space: nowrap;
-        }
-
-        // le prix de chaque plats
-        &__price {
-          margin: auto 0px 0px auto;
-          padding: 10px;
-          font-weight: bold;
-          color: $noir;
-        }
-
-        //  accompagnement de chaque plats
-        p {
-          overflow: hidden;
-          text-overflow: ellipsis;
-          white-space: nowrap;
-          display: block;
+        // TITLE CAT Entrees, Plats, Desserts
+        h2 {
+          padding: 0%;
+          margin-bottom: 5px;
+          font-weight: 100;
+          font-size: 13px;
           color: $gris-tres-fonce;
-          margin: 0px;
+          text-transform: uppercase;
+        }
+
+        // petit trait en dessous des nom de categorie
+        hr {
+          background-color: $vert-clair;
+          border: none;
+          height: 1px;
+          width: 40px;
+          margin: -20px 0 0 0;
+          padding: 0%;
+          line-height: 5px;
+        }
+      
+
+        .menu-item {  
+          @for $i from 0 to 4 {
+            &:nth-child(#{$i}) {
+              animation-delay: 500ms * $i;
+            }
+          }
+
+          animation: progressiv-opacity 1s;
+          animation-fill-mode: both;
+          display: flex;
+          box-shadow: 5px 5px 27px 10px $gris-fonce;
+          font-size: 12px;
+          background-color: $blamc;
+          border-radius: 20px;
+          overflow: hidden;
+
+          &:hover {
+            .slide {
+              animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+            }
+
+            i {
+              animation-name: rotation-chek;
+              animation-duration: 0.5s;
+              animation-timing-function: ease-in-out;
+              animation-delay: 0s;
+              animation-iteration-count: 1;
+            }
+          }
+        }
+
+        .slide {
+          margin-right: -5rem;
+          background-color: #99e2d0;
+          width: 5rem;
+          display: flex;
+          align-items: center;
+
+          i {
+            margin: auto;
+            color: white;
+            font-size: 25px;
+          }
+        }
+
+        // le Block du plat
+        &__plat {
+          padding: 10px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+
+          // le nom de chaque plat dans le block
+          &__name {
+            margin: 0px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+
+          // le prix de chaque plats
+          &__price {
+            margin: auto 0px 0px auto;
+            padding: 10px;
+            font-weight: bold;
+            color: $noir;
+          }
+
+          //  accompagnement de chaque plats
+          p {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            display: block;
+            color: $gris-tres-fonce;
+            margin: 0px;
+          }
         }
       }
-    }
   }
 }
 
-@media screen and (min-width: 470px) {
-  .header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 
-    &__img {
-      height: 40vh;
-      width: 100%;
-      object-fit: cover;
-    }
-  }
-}
